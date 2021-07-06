@@ -1,76 +1,75 @@
+@media only screen and (max-width: 800px) {
+  .nav {
+    flex-direction: column;
+  }
+  .logo {
+    width: 100%;
+    background-color: black;
+    padding: 4px 0px;
+  }
 
-@media only screen and (max-width: 800px){
-      .nav{
-            flex-direction: column;
-      }
-    
-      .nav ul{
-            flex-direction: column;
-            z-index: 1;
-            background-color: white;
-            width: 60%;
-            display: block;
-            text-align: center;
-    
-      }
-      .nav ul li {
-        width: 100%;
-      }
-    
-    
-      .nav .Git{
-            background-color: white;
-            z-index: 1;
-            width: 100%;
-            display: block;
-            margin: auto;
-      }
-      .burger{
-            display: block;
-      }
-    
-      .V-opacity{
-            opacity: 0;
-      }
-    
-      .N-height{
-        height: 50px;
-    
-      }
-       /* ______________Homepage ----- */ 
-    
-       .background .caption h1 {
-        font-size: 1.5rem;
-      }
-      
-      .background .caption p {
-        font-size: 1.1rem;
-    
-      }
-      .background .caption {
-        width: 80%;
-      }
-      /* _____________About Me______________ */
-      .main .contain{
-        flex-direction: column;
-      }
-      .contain .caption {
-        width: 80%;
-      }
-    
-      /* _________Skills_____________________ */
-      .container .main .Sk-img{
-        flex-direction: column;
-      }
+  .nav ul {
+    flex-direction: column;
+    z-index: 1;
+    background-color: white;
+    width: 60%;
+    display: block;
+    text-align: center;
+  }
+  .nav ul li {
+    width: 100%;
+  }
+
+  .nav .Git {
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .burger {
+    display: block;
+  }
+
+  .V-opacity {
+    opacity: 0;
+  }
+
+  .N-height {
+    height: 50px;
+  }
+  /* ______________Homepage ----- */
+
+  .background .caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .background .caption p {
+    font-size: 1.1rem;
+  }
+  .background .caption {
+    width: 80%;
+  }
+  /* _____________About Me______________ */
+  .main .contain {
+    flex-direction: column;
+  }
+  .contain .caption {
+    width: 80%;
+  }
+
+  /* _________Skills_____________________ */
+  .container .main .Sk-img {
+    flex-direction: column;
+  }
 }
-    
-@media screen and (max-width:460px){
-    
-      .background .caption p{
-        display: none;
-      }
-    
-      .background .caption .download{
-        font-size: 0.8rem;
-      }
-}  
+
+@media screen and (max-width: 460px) {
+  .background .caption p {
+    display: none;
+  }
+
+  .background .caption .download {
+    font-size: 0.8rem;
+  }
+}
