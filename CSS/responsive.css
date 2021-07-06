@@ -50,6 +50,21 @@
   .background .caption {
     width: 80%;
   }
+
+  .caption .Avatar-Namaste,
+  .Avatar-Hi {
+    width: 40%;
+  }
+  .background .caption {
+    width: 90%;
+  }
+  .background .caption h1 {
+    font-size: 1.4rem;
+  }
+  .background .caption p {
+    font-size: 1rem;
+  }
+
   /* _____________About Me______________ */
   .main .contain {
     flex-direction: column;
