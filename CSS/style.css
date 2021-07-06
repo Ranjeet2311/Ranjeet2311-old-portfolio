@@ -250,7 +250,7 @@ hr {
   transition: all 0.4s;
   background: white;
   border-radius: 6px;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
 }
 
 .background .caption .download:hover {
