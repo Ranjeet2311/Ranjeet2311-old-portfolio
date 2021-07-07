@@ -97,10 +97,13 @@
   align-items: center;
 }
 
-.nav .Git img {
+.nav .Git .Git-img {
+  width: 26px;
+  display: inline-block;
+}
+.nav .Git .Linkedin-img {
   width: 22px;
   display: inline-block;
-  filter: invert(1);
 }
 
 .nav .Git:hover {
