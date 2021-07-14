@@ -99,11 +99,11 @@
 
 .nav .Git .Git-img {
   width: 26px;
-  display: inline-flex;
+  display: inline-block;
 }
 .nav .Git .Linkedin-img {
   width: 22px;
-  display: inline-flex;
+  display: inline-block;
 }
 
 .nav .Git:hover {
