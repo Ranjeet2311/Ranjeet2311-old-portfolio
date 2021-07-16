@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Modal Content</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- -------------------style----------------- -->
+
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            body {
+                  background-image: url(./ped.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  height: 100vh;
+            }
+
+            .item-container {
+                  background: white;
+                  width: 80%;
+                  margin: 2rem auto;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  border: 4px solid black;
+                  border-radius: 12px;
+                  padding: 20px 20px;
+                  box-shadow: 30px 30px 30px #a09e9e;
+            }
+
+            h1 {
+                  text-align: center;
+            }
+
+            .image-slider {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+            }
+
+            .item-container .close-icon {
+                  text-align: right;
+            }
+
+            .Img {
+                  width: 50%;
+                  margin: 20px auto;
+            }
+
+            .Img:hover {
+                  transition: 2s;
+                  transform: scale(1.5);
+            }
+
+            .btn {
+                  font-size: 1.5rem;
+                  padding: 0.4rem 0.6rem;
+                  background-color: rgb(29, 161, 242);
+                  margin: 0.4rem 0.6rem;
+                  cursor: pointer;
+            }
+
+            .btn:hover {
+                  box-shadow: 8px 8px 20px grey;
+            }
+
+            .close-icon {
+                  padding: 4px 80px;
+                  font-size: 40px;
+                  margin: 10px 80px;
+                  box-shadow: 10px 10px 10px rgb(41, 40, 40);
+                  cursor: pointer;
+                  display: block;
+                  margin: 0px auto;
+            }
+
+            .close-icon:hover {
+                  color: white;
+                  background: rgb(29, 161, 242);
+            }
+
+            .close-icon {
+                  color: black;
+                  margin: 40px 0px 0px 0px;
+            }
+
+            /* ---------------------Responsive ---- */
+
+            @media only screen and (max-width: 700px) {
+                  .image-slider {
+                        flex-direction: column;
+                  }
+            }
+
+            ;
+      </style>
+</head>
+
+<body>
+      <section>
+            <div class="container">
+                  <div class="item-container">
+                        <h1></h1>
+                        <p></p>
+                        <hr>
+                        <img class="Img" src="" alt="">
+                        <h4></h4>
+
+                        <div class="image-slider">
+                              <button class="prev-btn btn">
+                                    <i class="fas fa-chevron-left"></i>
+                              </button>
+                              <button class="next-btn btn">
+                                    <i class="fas fa-chevron-right"></i>
+                              </button>
+                        </div>
+                        <button id="btn" class="btn"></button>
+                        <button id="close-icon" class="close-icon"></button>
+                  </div>
+            </div>
+      </section>
+
+      <!-- <script src="/app.js"></script> -->
+
+      <script>
+            const images = [
+                  {
+                        id: 5,
+                        img: "Ljubljana.jpg",
+                        text: "Beautiful Ljubljana",
+                  },
+                  {
+                        id: 2,
+                        img: "john.jpg",
+                        text: "Beautiful France",
+                  },
+                  {
+                        id: 3,
+                        img: "joss.jpg",
+                        text: "Beautiful Austria",
+                  },
+                  {
+                        id: 4,
+                        img: "rom.jpg",
+                        text: "Beautiful Croatia",
+                  },
+                  {
+                        id: 5,
+                        img: "vienna.jpg",
+                        text: "Beautiful Germany",
+                  },
+                  {
+                        id: 1,
+                        img: "wien.jpg",
+                        text: "Beautiful Vienna",
+                  },
+            ];
+
+            let currentItem = 0;
+
+            const closeIcon = document.querySelector("#close-icon");
+            const btn = document.querySelector("#btn");
+            const h1 = document.querySelector("h1");
+            const h4 = document.querySelector("h4");
+            const p = document.querySelector("p");
+            const pic = document.querySelector(".Img");
+            const imageSlider = document.querySelector(".image-slider");
+            const prevBtn = document.querySelector(".prev-btn");
+            const nextBtn = document.querySelector(".next-btn");
+
+            // -----Text insert in HTML ----
+
+            h1.textContent = "Best Pictures from Europe";
+            p.textContent = '"Hover the image to enlage it"';
+            h1.style.fontSize = "3rem";
+            h4.style.fontSize = "2rem";
+
+            btn.textContent = '"To see them, click here!"';
+
+            p.style.display = "None";
+            closeIcon.style.display = "None";
+            imageSlider.style.display = "None";
+
+            // -----Slider Function -----
+
+            function slideShow() {
+                  images[currentItem];
+                  pic.src = images[currentItem].img;
+                  h4.textContent = images[currentItem].text;
+            }
+
+            // Next button --
+            nextBtn.addEventListener("click", () => {
+                  currentItem++;
+                  if (currentItem >= images.length) {
+                        currentItem = 0;
+                        // console.log(currentImg);
+                  }
+                  slideShow();
+            });
+
+            // Prev Button--
+            prevBtn.addEventListener("click", () => {
+                  currentItem--;
+                  if (currentItem < 0) {
+                        currentItem = images.length - 1; //     currentItem = 3;
+                        console.log(currentItem);
+                  }
+                  slideShow();
+            });
+
+            // ----------Open Modal button ---
+
+            btn.addEventListener("click", () => {
+                  btn.style.display = "none";
+                  p.style.display = "block";
+                  closeIcon.style.display = "block";
+                  closeIcon.textContent = "Close";
+                  imageSlider.style.display = "block";
+
+                  // ----- Initial load
+                  window.addEventListener("DOMContentLoaded", () => {
+                        slideShow(currentItem);
+                  });
+                  slideShow();
+            });
+
+            // -----Close Button-----
+
+            closeIcon.addEventListener("click", () => {
+                  closeIcon.style.display = "none";
+                  btn.style.display = "block";
+                  if (alert("You will exit the gallery, Thanks for visitng!")) {
+                  } else window.location.reload();
+            });
+
+      </script>
+</body>
+
+</html>

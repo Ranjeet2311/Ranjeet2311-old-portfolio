@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>10 Days of JS</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- ------------Style ----------------- -->
+
+
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            body {
+                  background-image: url(./to-do-Background.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 100vh;
+                  width: 100vw;
+                  background-attachment: fixed;
+            }
+
+            .wrapper {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  border: none;
+                  /* width: 100vw; */
+                  /* height: 100vh; */
+                  /* background-image: url(./to-do-Background.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover; */
+
+
+            }
+
+            .container {
+                  border-radius: 20px;
+                  box-shadow: 10px 10px 40px black;
+                  padding: 2rem 4rem;
+                  background-color: #ffffff;
+                  height: auto;
+                  margin: 4rem 0rem;
+            }
+
+            h1 {
+                  text-align: center;
+                  text-shadow: 1px 1px 1px grey;
+            }
+
+            p {
+                  width: 80%;
+            }
+
+            hr {
+                  margin: 1rem auto;
+            }
+
+            .addToDo,
+            .addBtn {
+                  margin: 0.8rem auto;
+                  outline: none;
+                  color: rgb(124, 122, 122);
+                  font-size: 1rem;
+                  font-weight: 700;
+                  padding: 0.5rem 2rem;
+                  border: 2px solid silver;
+                  border-radius: 20px;
+                  text-decoration: underline;
+            }
+
+            .addBtn {
+                  box-shadow: 6px 6px 6px black;
+                  text-decoration: underline;
+                  cursor: pointer;
+            }
+
+            .addBtn:hover {
+                  box-shadow: 3px 3px 3px black;
+                  transition: all 0.3s ease-out;
+            }
+
+            .itemList {
+                  margin: 0.8rem auto;
+                  font-size: 1.4rem;
+                  font-weight: 700;
+                  color: Black;
+                  padding: 0.5rem 2rem;
+                  border: 2px solid silver;
+                  box-shadow: 6px 6px 6px black;
+            }
+
+            .delBtn {
+                  font-size: 2rem;
+                  border: none;
+                  margin: 0rem 0.5rem;
+                  background: transparent;
+                  cursor: pointer;
+            }
+
+            .list-Div {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 1rem auto;
+                  background-color: honeydew;
+            }
+
+            .line {
+                  text-decoration: line-through;
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="wrapper">
+
+            <div class="container">
+                  <div class="main">
+
+
+                        <h1><i class="fas fa-clipboard-list"></i> TO DO APP</h1>
+                        <hr>
+                        <input id="addToDo" class="addToDo" type="text" placeholder=" add to do ....">
+
+                        <button id="btn" class="addBtn">Add</button>
+                  </div>
+                  <div>
+                        <hr>
+                        <h4> Things to do :</h4>
+                        <h6>. Double click X to remove listed task from the list</h6>
+                        <h6>. Click check to mark task completed</h6>
+
+                  </div>
+                  <div class="list-container">
+
+                        <h4 id="item"> </h4>
+                        <hr>
+                  </div>
+            </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- --------------------Script ---------------------------- -->
+
+      <script>
+            addToDo = document.getElementById("addToDo");
+            btn = document.getElementById("btn");
+            item = document.getElementById("item");
+            container = document.querySelector(".container");
+            delBtnC = document.querySelector(".delBtn");
+            h1 = document.querySelector("h1");
+
+            h1.innerHTML = `<i class="fas fa-clipboard-list"></i> TO DO APP`;
+
+            btn.addEventListener("click", handleFormSubmit);
+
+            function handleFormSubmit(e) {
+                  e.preventDefault();
+                  const val = addToDo.value;
+
+                  if (val.length > 0) {
+                        let div = document.createElement("div");
+                        let p = document.createElement("p");
+
+                        div.classList.add("list-Div");
+                        item.appendChild(div);
+                        div.appendChild(p);
+                        div.classList.add("itemList");
+
+                        p.innerHTML = val;
+
+                        addToDo.value = "";
+
+                        //   ---Check button btn ---
+
+                        let checkBtn = document.createElement("button");
+                        div.appendChild(checkBtn);
+                        checkBtn.classList.add("delBtn");
+                        checkBtn.innerHTML = `<i class="far fa-check-square"></i>`;
+
+                        //   ---Delete button btn ---
+
+                        let delbtn = document.createElement("button");
+                        div.appendChild(delbtn);
+                        delbtn.classList.add("delBtn");
+                        delbtn.innerHTML = `<i class="fas fa-times"></i>`;
+
+                        // ---------Click Events------------
+                        //   -----Event Check button Line-through--
+
+                        checkBtn.addEventListener("click", () => {
+                              p.classList.toggle("line");
+                              checkBtn.style.color = "green";
+                              p.style.color = "green";
+                        });
+
+                        //  ------Delete Event on double click--
+                        delbtn.style.color = "red";
+
+                        delbtn.addEventListener("dblclick", () => {
+                              p.style.display = "none";
+                              delbtn.style.display = "none";
+                              div.style.display = "none";
+
+                              console.log(123);
+                        });
+                  } else {
+                        alert("Please enter a task");
+                  }
+            }
+
+      </script>
+</body>
+
+</html>

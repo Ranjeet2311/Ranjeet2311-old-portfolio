@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <!-- ---------Style-------- -->
+
+      <style>
+            * {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+            }
+
+            body {
+                  background-color: #160f1c;
+                  height: 100vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  background-image: url(./play-music-background.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+            }
+
+            .main {
+                  color: darkblue;
+                  margin: auto;
+                  text-align: center;
+            }
+
+            .main h1 {
+                  font-size: 3.5rem;
+                  color: white;
+            }
+
+            .Keypad {
+                  display: flex;
+                  height: 60vh;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: 4px solid black;
+                  width: 100%;
+            }
+
+            .keys {
+                  cursor: pointer;
+            }
+
+            .keysB {
+                  background-color: #ED213A;
+                  border: 2px solid rgb(22, 22, 22);
+                  color: white;
+                  text-align: center;
+                  width: 10%;
+                  height: 100px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0px 10px;
+            }
+
+            .keysW {
+                  background-color: rgb(252, 248, 248);
+                  border: 2px solid rgb(22, 22, 22);
+                  color: #160f1c;
+                  text-align: center;
+                  width: 10%;
+                  height: 100px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+            }
+      </style>
+
+
+
+
+</head>
+
+<body>
+      <div class="main">
+            <h1>Play the music</h2>
+                  <hr>
+
+      </div>
+
+      <section class="Keypad">
+            <div class="keys keysB">
+                  <div class="key1">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/China-Cymbal.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key2">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so2.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so3.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so4.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysB">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/Bass-Drum-Hit.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so6.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so5.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysW">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/so1.mp3"></audio>
+                  </div>
+            </div>
+            <div class="keys keysB">
+                  <div class="key">
+                        <h3>Tap</h3>
+                        <audio class="sounds" src="/app-demo/music/Drum.mp3"></audio>
+                  </div>
+            </div>
+      </section>
+
+
+      <!-- <script src="/app.js"></script> -->
+      <script>
+
+            const sounds = document.querySelectorAll('.sounds');
+            const keys = document.querySelectorAll('.keys');
+
+
+            keys.forEach((keys, index) => {
+                  keys.addEventListener('click', function () {
+                        sounds[index].currentTime = 0
+                        sounds[index].play();
+
+                  })
+            })
+
+      </script>
+</body>
+
+</html>

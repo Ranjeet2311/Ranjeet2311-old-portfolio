@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Digital Clock</title>
+
+
+      <!-- -----Stylesheet---------- -->
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+                  /* background-color: rgb(92, 80, 80); */
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            .container {
+                  background-image: url(./Clock-banner.jpg);
+                  background-color: silver;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 100vh;
+            }
+
+            .container .heading {
+                  padding: 40px 0px 0px 0px;
+                  font-size: 4rem;
+                  color: #068cda;
+                  box-shadow: 20px 20px 80px black;
+                  width: 40%;
+                  margin: 0px auto;
+            }
+
+            .item-container {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-weight: 700;
+                  color: white;
+                  font-size: 2rem;
+                  height: 200px;
+                  width: 50%;
+                  margin: 200px auto;
+                  /* padding: 0px 20px; */
+                  border-radius: 20px;
+                  border: 10px solid white;
+                  box-shadow: 30px 30px 70px grey;
+                  background: #737a7e;
+            }
+
+            .day-date-items {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+
+            }
+
+            .time {
+                  margin-top: 0.5rem;
+                  padding: 0px 20px 0px 10px;
+                  font-size: 3rem;
+                  box-shadow: 20px 10px 100px #9ecaed;
+                  background: linear-gradient(to left, #0099f7, #f11712);
+            }
+
+            .item-container .day {
+                  font-size: 2rem;
+                  display: flex;
+                  align-items: center;
+                  width: 20%;
+            }
+
+            .item-container .phases {
+                  font-size: 2rem;
+            }
+
+            @media only screen and (max-width:1300px) {
+                  .item-container {
+                        flex-direction: column;
+                        height: 300px;
+                  }
+
+                  .time {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                  }
+
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="container">
+            <h1 class="heading" id="heading"></h1>
+            <div class="item-container">
+                  <div class="day-date-items">
+                        <h1 class="day" id="day"></h1>
+                        <h1 class="day phases" id="phases"></h1>
+
+                  </div>
+                  <div class="time" id="day"></div>
+                  <div class="time" id="time"></div>
+                  <div class="time" id="period"></div>
+            </div>
+      </div>
+
+      <!-- <script src="/app.js"></script> -->
+      <script>
+            const time = document.getElementById("time");
+            const period = document.getElementById("period");
+            const phases = document.getElementById("phases");
+            const heading = document.getElementById("heading");
+            const day = document.getElementById("day");
+
+            heading.innerHTML = "! Your Digital Clock !";
+
+            setInterval(() => {
+                  //   Date -- Day
+                  const date = new Date();
+                  let getDay = date.getDay();
+                  let daylist = [
+                        "Sunday",
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday ",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                  ];
+                  day.innerHTML = daylist[getDay];
+                  //   Time--
+                  let hour = date.getHours();
+                  let min = date.getMinutes();
+                  let sec = date.getSeconds();
+
+                  //   conditions --
+                  if (hour < 12) {
+                        period.innerHTML = "AM";
+                  } else {
+                        period.innerHTML = "PM";
+                  }
+
+                  if (hour < 10) {
+                        hour = "0" + hour;
+                  }
+
+                  if (min < 10) {
+                        min = "0" + min;
+                  }
+
+                  if (sec < 10) {
+                        sec = "0" + sec;
+                  }
+
+                  // Time phase conditionals --
+
+                  if (hour < 12) {
+                        phases.innerHTML = "!Good Morning!";
+                  }
+                  if (hour >= 12) {
+                        phases.innerHTML = "!Good Afternoon";
+                  }
+                  if (hour >= 18) {
+                        phases.innerHTML = "!Good Evening!";
+                  }
+                  if (hour == 22) {
+                        phases.innerHTML = "!Good Night!";
+                  }
+
+                  time.innerHTML = hour + " " + ":" + " " + min + " " + ":" + " " + sec;
+            });
+
+
+      </script>
+</body>
+
+</html>

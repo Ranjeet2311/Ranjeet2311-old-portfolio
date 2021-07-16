@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Weight Converter</title>
+      <link rel="stylesheet" href="/index.css">
+
+      <!-- ------------------Style--------------- -->
+
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  box-sizing: border-box;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            .container {
+                  background-image: url(./weight-banner.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 100%;
+            }
+
+            .row {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100vh;
+            }
+
+            .row input {
+                  width: 100%;
+                  padding: 10px 10px;
+                  margin: 10px 0px;
+                  font-size: 1.6rem;
+                  outline: none;
+                  border-radius: 6px;
+
+            }
+
+            .row .card {
+                  margin: 10px 0px;
+            }
+
+            .row .card {
+                  margin: 10px 0px;
+            }
+
+            .row .card #poundsOutput,
+            #ozOutput,
+            #gmOutput,
+            #mgOutput {
+                  font-size: 1.4rem;
+            }
+      </style>
+
+
+
+
+
+</head>
+
+<body>
+      <div class="container">
+            <div class="row">
+                  <div>
+                        <h1>Wight Converter</h1>
+                        <form>
+                              <input id="lbsInput" type="number" placeholder="Enter kilograms...">
+                        </form>
+                        <div class="output">
+                              <div class="card">
+                                    <div>
+                                          <h2>Pounds</h2>
+                                          <div id="poundsOutput"></div>
+                                    </div>
+                              </div>
+                              <div class="card">
+                                    <div>
+                                          <h2>Ounces</h4>
+                                                <div id="ozOutput"></div>
+                                    </div>
+                              </div>
+                              <div class="card">
+                                    <div>
+                                          <h2>Grams</h4>
+                                                <div id="gmOutput"></div>
+                                    </div>
+                              </div>
+                              <div class="card">
+                                    <div>
+                                          <h2>Milligram</h4>
+                                                <div id="mgOutput"></div>
+                                    </div>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+      </div>
+
+
+
+      <!-- <script src="/app.js"></script> -->
+      <script>
+            const lbsInput = document.querySelector("#lbsInput");
+            const poundsOutput = document.querySelector("#poundsOutput");
+            const gmOutput = document.querySelector("#gmOutput");
+            const ozOutput = document.querySelector("#ozOutput");
+            const mgOutput = document.querySelector("#mgOutput");
+            const output = document.querySelector(".output");
+
+            output.style.visibility = "Hidden";
+
+            lbsInput.addEventListener("input", (e) => {
+                  output.style.visibility = "visible";
+                  let kg = e.target.value;
+                  poundsOutput.innerHTML = kg * 2.2046;
+                  gmOutput.innerHTML = kg / 0.001;
+                  ozOutput.innerHTML = kg * 35.274;
+                  mgOutput.innerHTML = kg * 1000000;
+
+                  if (kg <= 0) {
+                        output.style.visibility = "Hidden";
+                  }
+            });
+
+
+      </script>
+</body>
+
+</html>
