@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>e-store</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+      <!-- ----------------Stylesheet --------- -->
+
+      <style>
+            @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+            :root {
+                  --main-bg-color: rgb(29, 161, 242);
+            }
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            .navbar {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  background-color: var(--main-bg-color);
+            }
+
+            /* ----Logo-- */
+            .logo {
+                  width: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .logo img {
+                  width: 80px;
+                  margin: 2px auto;
+                  padding: 8px 10px;
+                  cursor: pointer;
+            }
+
+            .logo img:hover {
+                  filter: grayscale(1);
+            }
+
+            /* ---Menu items --- */
+            .navmenu {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 70%;
+            }
+
+            .navmenu .menu-items {
+                  text-decoration: none;
+                  color: white;
+                  font-size: 1.4rem;
+                  font-weight: 600;
+                  margin: 0px 10px;
+            }
+
+            .navmenu .menu-items:hover {
+                  color: silver;
+            }
+
+            .navmenu {
+                  list-style: none;
+            }
+
+
+
+            /* --------Search input and button ------- */
+            .search {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0px 40px;
+                  padding: 4px 10px;
+                  border-radius: 8px;
+                  font-size: 1.4rem;
+            }
+
+            .search input {
+                  margin: 6px 0px;
+                  width: 30vw;
+                  padding: 0px 10px;
+                  height: 35px;
+                  border-radius: 0.6rem;
+                  /* border: 2px solid black; */
+                  outline: none;
+                  font-family: 'Play', sans-serif;
+
+
+            }
+
+            .btn {
+                  width: auto;
+                  font-size: 1.2rem;
+                  padding: 2px 10px;
+                  margin: 0px 15px;
+                  background-color: white;
+                  color: var(--main-bg-color);
+                  border: none;
+                  border-radius: 0.6rem;
+                  box-shadow: 6px 6px 16px silver;
+
+            }
+
+            .btn:hover {
+                  cursor: pointer;
+                  color: rgb(29, 161, 242);
+                  background: rgb(247, 249, 250);
+                  box-shadow: 0px 0px 0px black;
+            }
+
+            /* _____Social__________ */
+
+            .social-media {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: rgb(130, 201, 30);
+                  font-size: 2rem;
+                  padding: 20px 8px;
+                  width: 20%;
+            }
+
+            .social-media i {
+                  padding: 0px 8px;
+                  cursor: pointer;
+                  /* color: rgb(7, 119, 233); */
+            }
+
+            .iconFb {
+                  color: white;
+                  cursor: pointer;
+            }
+
+            .iconTw {
+                  color: white;
+                  cursor: pointer;
+            }
+
+            .iconYt {
+                  color: white;
+                  cursor: pointer;
+            }
+
+
+
+
+
+            /* -------Burger ---- */
+            .burger {
+                  position: absolute;
+                  top: 15px;
+                  right: 5%;
+                  font-size: 3rem;
+                  color: rgb(7, 119, 233);
+                  margin: 0px auto;
+                  cursor: pointer;
+                  z-index: 1;
+            }
+
+            .burger-item {
+                  opacity: 0;
+            }
+
+            .burger-item:hover {
+                  transform: scale(1.2);
+                  transition: all 0.3s ease-in-out;
+            }
+
+            .close-item {
+                  color: rgb(7, 119, 233);
+                  position: absolute;
+                  top: 0px;
+                  right: 5%;
+                  transform: skew(5, 4);
+                  opacity: 0;
+            }
+
+            .close-item :hover {
+                  transform: rotate(90deg) scale(1.2);
+                  transition: all 0.8s ease-out;
+                  color: grey;
+            }
+
+            /* ____________Screen _________ */
+
+            @media screen and (max-width: 900px) {
+                  .navbar {
+                        flex-direction: column;
+                  }
+
+                  .navbar {
+                        background-color: transparent;
+                  }
+
+                  .navmenu {
+                        flex-direction: column;
+                        margin: 0 auto;
+                        display: block;
+                        width: 100%;
+                  }
+
+                  .navmenu li {
+                        border: 2px solid white;
+                        width: 100%;
+                        box-shadow: 0px 0px 100px #f7f5f4;
+                        text-align: center;
+                  }
+
+                  .navmenu .menu-items {
+                        text-decoration: none;
+                        color: rgb(7, 119, 233);
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        margin: 0px 10px;
+                  }
+
+                  .hide {
+                        display: none;
+                  }
+
+                  .burger-item {
+                        opacity: 1;
+                  }
+
+                  .close-item {
+                        opacity: 1;
+                  }
+
+                  #slider-Home {
+                        margin-top: 7rem;
+                  }
+
+                  .iconFb {
+                        color: rgb(7, 119, 233);
+                        cursor: pointer;
+                  }
+
+                  .iconTw {
+                        color: rgb(7, 119, 233);
+                        cursor: pointer;
+                  }
+
+                  .iconYt {
+                        color: rgb(244, 22, 22);
+                        cursor: pointer;
+                  }
+
+                  .search input {
+                        margin: 6px 0px;
+                        width: 30vw;
+                        padding: 0px 10px;
+                        height: 35px;
+                        border-radius: 0.6rem;
+                        outline: none;
+                        border: none;
+                        box-shadow: 6px 6px 10px rgb(7, 119, 233);
+                        font-family: 'Play', sans-serif;
+
+
+                  }
+
+
+
+
+
+            }
+
+            /* ______________________ */
+
+
+            /* _______________Navigation Finished__________________ */
+
+
+            #slider-Home {
+                  background-color: rgb(253, 252, 252);
+                  height: 353px;
+                  /* width: 100%; */
+                  overflow: hidden;
+                  margin: auto;
+                  display: flex;
+                  justify-content: center;
+
+
+            }
+
+            .slider1 {
+                  transform: translate(-20vw);
+                  animation: slide1 12s infinite ease-in-out;
+                  max-width: 100%;
+                  display: block;
+                  margin: auto;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  /* position: relative;
+      text-align: center;
+      color: red; */
+
+            }
+
+            .slider2 {
+                  transform: translate(0vw);
+                  animation: slide2 12s infinite ease-in-out;
+                  max-width: 100%;
+                  display: block;
+                  margin: auto;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+
+
+            }
+
+
+
+            .centered {
+                  position: absolute;
+                  top: 30%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  /* background-color: rgb(182, 173, 173); */
+                  padding: 6px 8px;
+
+            }
+
+            .centered h1 {
+                  font-family: 'Play', sans-serif;
+                  position: relative;
+                  text-align: center;
+                  color: white;
+                  text-shadow: 2px 2px rgb(0, 6, 10);
+
+
+            }
+
+            .centered p {
+                  font-family: 'Play', sans-serif;
+                  position: relative;
+                  text-align: center;
+                  color: white;
+                  text-shadow: 2px 2px rgb(1, 12, 19);
+
+            }
+
+            .btn1 {
+                  border-radius: 6px;
+                  text-align: center;
+                  display: block;
+                  margin: 10px auto;
+                  width: 30%;
+                  /* text-shadow: 2px 2px rgb(241, 243, 245); */
+
+            }
+
+            .btn1:hover {
+                  border-radius: 6px;
+                  text-align: center;
+                  display: block;
+                  margin: 10px auto;
+                  width: 30%;
+
+            }
+
+            .AboveBox {
+                  height: 30vh;
+                  display: flex;
+                  justify-content: space-between;
+                  margin: 50px auto 0px auto;
+                  padding: 0px 40px;
+                  font-family: 'Play', sans-serif;
+            }
+
+            .btn2 {
+                  color: black;
+                  border: 2px solid var(--main-bg-color);
+                  background-color: var(--main-bg-color);
+                  border-radius: 6px;
+                  display: block;
+                  margin: 20px auto;
+                  padding: 10px 10px;
+                  /* width: 30%; */
+                  /* text-shadow: 2px 2px rgb(1, 12, 19); */
+                  width: 28vh;
+                  font-size: 15px;
+                  font-family: 'Play', sans-serif;
+            }
+
+            .btn2:hover {
+                  color: white;
+                  border: 2px solid var(--main-bg-color);
+                  background-color: var(--main-bg-color);
+                  border-radius: 6px;
+                  padding: 10px 20px;
+                  display: block;
+                  margin: 20px auto;
+                  padding: 10px 10px;
+                  /* width: 30%; */
+                  width: 28vh;
+                  font-size: 15px;
+                  font-family: 'Play', sans-serif;
+            }
+
+            hr {
+                  display: block;
+                  margin: auto;
+                  max-width: 90%;
+                  margin: 5px 0px;
+            }
+
+            .cardtSlotBox {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  margin: 0px auto 40px auto;
+                  overflow: hidden;
+
+
+            }
+
+            .cardtSlotBoxs:hover {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  margin: auto;
+                  overflow: hidden;
+            }
+
+            .cardtSlotBox img {
+                  width: 140px;
+                  height: 180px;
+                  object-fit: contain;
+            }
+
+            .cardtSlotBox img:hover {
+                  width: 140px;
+                  height: 180px;
+                  object-fit: contain;
+                  cursor: pointer;
+                  transform: scale(1.1);
+            }
+
+            .cardtSlotBox h2 {
+                  text-align: center;
+                  font-size: 12px;
+                  font-family: 'Play', sans-serif;
+            }
+
+            .cardtSlotBox h2:hover {
+                  color: var(--main-bg-color);
+                  text-align: center;
+                  font-size: 12px;
+                  cursor: pointer;
+                  font-family: 'Play', sans-serif;
+                  transform: scale(1.1);
+            }
+
+            .cardtSlotBox p {
+                  text-align: center;
+                  font-size: 12px;
+                  font-family: 'Play', sans-serif;
+            }
+
+            .cardtSlotBox p:hover {
+                  color: var(--main-bg-color);
+                  text-align: center;
+                  font-size: 12px;
+                  cursor: pointer;
+                  font-family: 'Play', sans-serif;
+                  transform: scale(1.1);
+            }
+
+
+            footer {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: white;
+                  background-color: var(--main-bg-color);
+                  height: 10vh;
+                  font-size: 12px;
+                  font-family: 'Play', sans-serif;
+            }
+
+
+
+            @keyframes slide1 {
+                  0% {
+                        transform: translate(-60vw)
+                  }
+
+                  100% {
+                        transform: translate(48vw)
+                  }
+            }
+
+            @keyframes slide2 {
+                  0% {
+                        transform: translate(-48vw)
+                  }
+
+                  100% {
+                        transform: translate(94vw)
+                  }
+            }
+
+
+            /* ----------Responsivness--------------- */
+
+            @media screen and (max-width:1030px) {
+                  nav {
+                        flex-direction: column;
+                  }
+
+                  .navbar {
+                        flex-direction: column;
+                  }
+
+                  ul {
+                        flex-direction: column;
+                  }
+
+                  .search {
+                        margin: 8px 40px;
+                  }
+
+                  .cardtSlotBox {
+                        flex-direction: column;
+                        /* overflow: scroll; */
+                  }
+
+                  .btn2 {
+                        width: 20vh;
+                  }
+
+                  .burger {
+                        display: block;
+                  }
+
+                  .V-responsive {
+                        opacity: 0;
+                  }
+
+                  .H-responsive {
+                        height: 130px;
+                  }
+            }
+
+            @media screen and (max-width:360px) {
+                  ul {
+                        flex-direction: column;
+                  }
+
+                  .search {
+                        flex-direction: column;
+                  }
+
+                  .btn {
+                        width: 94%;
+                  }
+
+                  .btn:hover {
+                        width: 57%;
+                  }
+
+                  .main_container {
+                        grid-auto-flow: column;
+
+                  }
+            }
+      </style>
+
+</head>
+
+<body>
+      <header>
+            <div class="navbar">
+                  <div class="logo hide">
+                        <img src="/img/Logo.png" alt="" srcset="">
+                  </div>
+                  <div class="navmenu hide">
+                        <li><a class="menu-items" href="/home">Home</a></li>
+                        <li><a class="menu-items" href="/home">Products</a></li>
+                        <li><a class="menu-items" href="/home">Contact</a></li>
+                        <div class="search">
+                              <input type="text" name="Search" title="Serch for the product"
+                                    placeholder="Serch for the product">
+                              <button class="btn"> Search</button>
+                        </div>
+                  </div>
+                  <div class="social-media hide">
+                        <div class="iconFb"><i class="fab fa-facebook-square"></i></div>
+                        <div class="iconYt"><i class="fab fa-youtube"></i></div>
+                        <div class="iconTw"><i class="fab fa-twitter-square"></i> </div>
+
+                  </div>
+                  <div class="burger">
+                        <div class="burger-item " id="burger"><i class="fas fa-bars"></i></div>
+                        <div class="close-item " id="burger-close"><i class="fas fa-times"></i></div>
+
+                  </div>
+            </div>
+
+      </header>
+
+      <!-- -------------Navigation Finished------- -->
+      <!-- --------Slider Starts---------- -->
+
+      <main id="slider-Home">
+            <div class="slider1">
+                  <img class="img1" src="img/slimg3.jpg" alt="">
+                  <div class="centered">
+                        <h1>Buy Groccery at discount rate</h1>
+                        <hr>
+                        <p>We have all you need</p>
+                        <button class="btn1 btn">Click Here</button>
+                  </div>
+            </div>
+            <div class="slider2">
+                  <img class="img2" src="img/slimg2.jpg" alt="">
+                  <div class="centered">
+                        <h1>An online store for fancy clothing</h1>
+                        <hr>
+                        <p>We have all you need</p>
+                        <button class="btn1 btn">Click Here</button>
+                  </div>
+            </div>
+
+            <!-- -----------Main body starts ----------- -->
+      </main>
+
+      <div class="AboveBox">
+            <div class="Heading">
+                  <h1>Top Deals on Electronics</h1>
+                  <hr>
+                  <p>Devices amd Accessories</p>
+            </div>
+            <div>
+                  <button class="btn btn2">View All</button>
+            </div>
+      </div>
+      <!-- First Card begining / Best selling Phones -->
+      <div class="cardtSlotBox">
+            <div class="cardSlot">
+                  <img src="img/cardImages1/Headphones.jpeg" alt="">
+                  <H2><b>Wireless Headphone</b></H2>
+                  <p>$99.99</p>
+                  <p>JBL, Bosch, Mi..etc</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages1/Speaker1.jpeg" alt="">
+                  <H2><b>Wireless Headphone</b></H2>
+                  <p>$149.99</p>
+                  <p>JBL, Bosch, Mi..etc</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages1/logitech.jpeg" alt="">
+                  <H2><b>Wireless Headphone</b></H2>
+                  <p>$51.99</p>
+                  <p>JBL, Bosch, Mi..etc</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages1/jbl true Wireless.jpeg" alt="">
+                  <H2><b>Wireless Headphone</b></H2>
+                  <p>$299.99</p>
+                  <p>JBL, Bosch, Mi..etc</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages1/Home Theatre.jpeg" alt="">
+                  <H2><b>Wireless Headphone</b></H2>
+                  <p>$49.99</p>
+                  <p>JBL, Bosch, Mi..etc</p>
+            </div>
+      </div>
+
+      <!-- Second Card begining / Best selling Phones -->
+
+      <div class="AboveBox">
+            <div class="Heading">
+                  <h1>Best selling Phones</h1>
+                  <hr>
+                  <p>Trending Now</p>
+            </div>
+            <div>
+                  <button class="btn btn2">View All</button>
+            </div>
+      </div>
+
+      <div class="cardtSlotBox">
+            <div class="cardSlot">
+                  <img src="img/cardImages2/samsung-galaxy-a31.jpeg" alt="">
+                  <H2><b>Samsung-galaxy-a31</b></H2>
+                  <p>$299.99</p>
+                  <p>5000 mAh Battery</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages2/samsung-galaxy-m11.jpeg" alt="">
+                  <H2><b>Samsung-galaxy-m11</b></H2>
+                  <p>$349.99</p>
+                  <p>5000 mAh Battery</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages2/samsung-galaxy-a51.jpeg" alt="">
+                  <H2><b>Samsung-galaxy-a51</b></H2>
+                  <p>$499.99</p>
+                  <p>48MP Quad cam</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages2/samsung-galaxy-s20-ultra.jpeg" alt="">
+                  <H2><b>Samsung-galaxy-s20-ultra</b></H2>
+                  <p>$1099.99</p>
+                  <p>108MP Triple Cam</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages2/samsung-a20.jpeg" alt="">
+                  <H2><b>Samsung-a20</b></H2>
+                  <p>$249.99</p>
+                  <p>5500mAh Battery/p>
+            </div>
+      </div>
+      <!-- Second Card Ending / Best selling Phones -->
+
+      <!-- Third Card Begining / Furniture Bestsellers -->
+      <div class="AboveBox">
+            <div class="Heading">
+                  <h1>Furniture Bestsellers</h1>
+                  <hr>
+                  <p>Trending Now</p>
+            </div>
+            <div>
+                  <button class="btn btn2">View All</button>
+            </div>
+      </div>
+
+      <div class="cardtSlotBox">
+            <div class="cardSlot">
+                  <img src="img/cardImages3/Hammock1.jpeg" alt="">
+                  <H2><b>Hammock</b></H2>
+                  <p>$89.99</p>
+                  <p>Trendy Collection</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages3/Officechair.jpeg" alt="">
+                  <H2><b>Office Chair</b></H2>
+                  <p>$119.99</p>
+                  <p>Local Furniture</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages3/Sofaset.jpeg" alt="">
+                  <H2><b>Sofa Set</b></H2>
+                  <p>$349.99</p>
+                  <p>Premium Lifestyle</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages3/Hammock2.jpeg" alt="">
+                  <H2><b>Swings</b></H2>
+                  <p>$179.99</p>
+                  <p>Made in Italy</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages3/Studychair.jpeg" alt="">
+                  <H2><b>Study Chair</b></H2>
+                  <p>$135.99</p>
+                  <p>Trendy Collection/p>
+            </div>
+      </div>
+      <!-- Third Card Ending / Furniture Bestsellers -->
+
+      <!-- Fourth Card Begining / Furniture Bestsellers -->
+
+      <div class="AboveBox">
+            <div class="Heading">
+                  <h1>Top Offers On</h1>
+                  <hr>
+                  <p>Men's / Women's Accessories</p>
+            </div>
+            <div>
+                  <button class="btn btn2">View All</button>
+            </div>
+      </div>
+
+      <div class="cardtSlotBox">
+            <div class="cardSlot">
+                  <img src="img/cardImages4/Casio-original.jpeg" alt="">
+                  <H2><b>Casio & more</b></H2>
+                  <p>Upto 40% Off</p>
+                  <p>Women/Men Watches</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages4/ray-ban-original.jpeg" alt="">
+                  <H2><b>Ray-Ban Frame</b></H2>
+                  <p>Upto 40% Off</p>
+                  <p>Frames</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages4/allure-design-original.jpeg" alt="">
+                  <H2><b>U.S. Polo Assn.</b></H2>
+                  <p>Upto 50% Off</p>
+                  <p>Men's Wallets & Belts</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages4/sling-bag-fastrack-original.jpeg" alt="">
+                  <H2><b>sling-bag</b></H2>
+                  <p>Upto 30% Off</p>
+                  <p>Made in Italy</p>
+            </div>
+            <div class="cardSlot">
+                  <img src="img/cardImages4/Unisex-backpac.jpeg" alt="">
+                  <H2><b>Unisex-backpac</b></H2>
+                  <p>Upto 20% Off</p>
+                  <p>Trendy Collection/p>
+            </div>
+      </div>
+
+
+
+      <footer>
+            <p>Copywright 2020 &copy; all rights reserved</p>
+      </footer>
+
+
+      <!-- <script src="/js/main.js"></script> -->
+      <script>
+
+            const logo = document.querySelector(".logo");
+            const navmenu = document.querySelector(".navmenu");
+            const socialMedia = document.querySelector(".social-media");
+            const burgerDisplay = document.querySelector("#burger");
+            const burgerClose = document.querySelector("#burger-close");
+
+            burgerDisplay.addEventListener("click", () => {
+                  logo.classList.remove("hide");
+                  navmenu.classList.remove("hide");
+                  socialMedia.classList.remove("hide");
+                  burgerDisplay.style.display = "none";
+                  burgerClose.style.display = "block";
+            });
+            burgerClose.addEventListener("click", () => {
+                  logo.classList.add("hide");
+                  navmenu.classList.add("hide");
+                  socialMedia.classList.add("hide");
+                  burgerClose.style.display = "none";
+                  burgerDisplay.style.display = "block";
+            });
+
+            burgerClose.style.display = "none";
+            burgerDisplay.style.visibility = "none";
+
+
+      </script>
+
+
+</body>
+
+</html>
