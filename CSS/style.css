@@ -470,7 +470,6 @@ hr {
   border: none;
   /* background: transparent; */
   margin: 3rem 0.5rem;
-  padding: 0.5rem 2rem;
   box-shadow: 8px 8px 14px rgb(80, 79, 79);
   background: cornflowerblue;
 }
@@ -486,6 +485,8 @@ hr {
   color: white;
   font-weight: 900;
   text-shadow: 2px 2px 2px black;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 }
 
 /* -------Projects container */
