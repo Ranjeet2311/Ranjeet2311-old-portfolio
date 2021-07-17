@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tech-World</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  font-family: "Poppins", sans-serif;
+                  scroll-behavior: smooth;
+                  box-sizing: border-box;
+            }
+
+            /* _____________________Upper bar ______________ */
+
+            .headbar_main {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: white;
+                  font-weight: 800;
+                  background-color: #5c5757;
+                  width: 100%;
+                  padding: 0.6rem 0rem;
+            }
+
+            .head_bar {
+                  margin: 8px 0px;
+            }
+
+            .head_bar a {
+                  font-size: 1rem;
+                  text-decoration: none;
+                  color: white;
+                  margin: 10px;
+                  font-weight: 800;
+            }
+
+            /* ____________________Navigation Bar starts_____________ */
+
+            .navbar {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  background: black;
+            }
+
+            /* ----Logo-- */
+            .logo {
+                  width: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  filter: invert(1);
+            }
+
+            .logo img {
+                  width: 80px;
+                  margin: 5px auto;
+                  padding: 8px 10px;
+                  cursor: pointer;
+            }
+
+            /* ---Menu items --- */
+            .navmenu {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 40%;
+            }
+
+            .navmenu .menu-items {
+                  text-decoration: none;
+                  color: white;
+                  font-size: 1.4rem;
+                  font-weight: 600;
+                  margin: 0px 10px;
+            }
+
+            .navmenu .menu-items:hover {
+                  color: grey;
+            }
+
+            .navmenu {
+                  list-style: none;
+            }
+
+            /* _____Social__________ */
+
+            .social-media {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  color: white;
+                  font-size: 2rem;
+                  padding: 20px 8px;
+                  width: 20%;
+            }
+
+            .social-media i {
+                  padding: 0px 8px;
+            }
+
+            .iconFb :hover {
+                  color: rgb(7, 119, 233);
+                  cursor: pointer;
+            }
+
+            .iconTw :hover {
+                  color: rgb(29, 161, 242);
+                  cursor: pointer;
+            }
+
+            .iconYt :hover {
+                  color: rgb(244, 22, 22);
+                  cursor: pointer;
+            }
+
+            /* -------Burger ---- */
+            .burger {
+                  position: absolute;
+                  top: 15px;
+                  right: 5%;
+                  font-size: 3rem;
+                  color: white;
+                  margin: 0px auto;
+                  cursor: pointer;
+            }
+
+            .burger-item {
+                  opacity: 0;
+            }
+
+            .burger-item:hover {
+                  transform: scale(1.2);
+                  transition: all 0.3s ease-in-out;
+            }
+
+            .close-item {
+                  color: white;
+                  position: absolute;
+                  top: 0px;
+                  right: 5%;
+                  transform: skew(5, 4);
+                  opacity: 0;
+            }
+
+            .close-item :hover {
+                  transform: rotate(90deg) scale(1.2);
+                  transition: all 0.8s ease-out;
+                  color: grey;
+            }
+
+            /* ____________Screen _________ */
+
+            @media screen and (max-width: 900px) {
+                  .navbar {
+                        flex-direction: column;
+                        background: black;
+                  }
+
+                  .navmenu {
+                        flex-direction: column;
+                        margin: 0 auto;
+                        display: block;
+                        width: 100%;
+                  }
+
+                  .navmenu li {
+                        /* border: 2px solid white; */
+                        width: 100%;
+                        /* box-shadow: 0px 0px 100px #f7f5f4; */
+                        text-align: center;
+                  }
+
+                  .hide {
+                        display: none;
+                  }
+
+                  .burger-item {
+                        opacity: 1;
+                  }
+
+                  .close-item {
+                        opacity: 1;
+                  }
+            }
+
+            /* ______________________ */
+
+            /* _____________Burger finished ---- */
+
+            /* __________Main Starts ---- */
+
+            .main {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  color: white;
+                  background-color: #5c5757;
+            }
+
+            .container {
+                  margin: 0px auto;
+                  padding: 10px 20px;
+                  width: 90%;
+            }
+
+            .container img {
+                  /* background-image: linear-gradient(to top, #2a302a 0%, #f55959 100%); */
+                  width: 70%;
+                  height: 100%;
+                  margin: 2px 10px;
+                  transform: rotate(360deg);
+                  transition: 2s;
+            }
+
+            .caption {
+                  width: 40%;
+                  margin: auto 4px;
+                  padding: 23px 28px 23px 8px;
+            }
+
+            .caption h1 {
+                  font-size: 2.8rem;
+            }
+
+            .caption hr {
+                  background-color: white;
+                  position: relative;
+                  margin: 4px;
+                  width: 90%;
+                  left: 0%;
+            }
+
+            .caption h2 {
+                  font-size: 1.8rem;
+                  margin: 10px auto;
+                  padding: 0px 4px;
+                  background-image: linear-gradient(to top, #2a302a 0%, #f55959 100%);
+            }
+
+            .caption p {
+                  font-size: 1.2rem;
+                  margin: 40px auto;
+            }
+
+            .btn2 {
+                  color: white;
+                  outline: none;
+                  font-size: 1.2rem;
+                  margin: 5px 8px;
+                  padding: 8px 20px;
+                  border-radius: 10px;
+                  background: #c94b4b;
+                  /* fallback for old browsers */
+                  background: -webkit-linear-gradient(to right,
+                              #4b134f,
+                              #c94b4b);
+                  /* Chrome 10-25, Safari 5.1-6 */
+                  background: linear-gradient(to right,
+                              #4b134f,
+                              #c94b4b);
+                  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+                  cursor: pointer;
+            }
+
+            .btn2:hover {
+                  cursor: pointer;
+                  background-image: linear-gradient(to top, #2a302a 0%, #f55959 100%);
+            }
+
+            .heading {
+                  background-color: #0a0a0a;
+                  color: white;
+                  font-size: 2.8rem;
+                  text-align: center;
+                  margin: 40px 0px;
+                  display: block;
+                  font-size: 2.8rem;
+                  padding: 8px 6px;
+            }
+
+            .container_2 {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 49px auto;
+                  padding: 0px 20px;
+                  width: 90%;
+                  background-color: #5c5757;
+            }
+
+            .container_2 img {
+                  width: 20%;
+                  border-radius: 16px;
+                  border: 4px solid white;
+                  /* transform: rotate(360deg); */
+                  transition: 1s;
+            }
+
+            .text {
+                  color: white;
+                  padding: 0px 30px;
+                  /* transform: skew(4);
+  transition: 8s; */
+            }
+
+            .text h1 {
+                  margin: 10px 0px;
+                  display: block;
+                  font-size: 2.8rem;
+                  padding: 0rem 3rem;
+
+            }
+
+            .hr_2 {
+                  background-color: white;
+                  position: relative;
+                  margin: 4px;
+                  width: 50%;
+                  left: 0%;
+            }
+
+            .text p {
+                  font-size: 1.2rem;
+                  margin: 0px auto;
+                  padding: 20px;
+            }
+
+            /* -----------Container_2 right text---- */
+            .text-r {
+                  color: white;
+                  padding: 0px 30px;
+
+            }
+
+            .text-r h1 {
+                  margin: 10px 0px;
+                  display: block;
+                  font-size: 2.8rem;
+                  text-align: right;
+                  padding: 0rem 3rem;
+
+            }
+
+            .hr_3 {
+                  background-color: white;
+                  position: absolute;
+                  margin: 4px;
+                  width: 40%;
+                  right: 6%;
+            }
+
+            .text-r p {
+                  font-size: 1.2rem;
+                  margin: 0px auto;
+                  padding: 20px;
+            }
+
+            /* ____________Video section________ */
+
+            .videos_Section {
+                  background-color: #5c5757;
+            }
+
+            .videos_Section h1 {
+                  margin: 30px 0px;
+                  display: block;
+                  font-size: 2.8rem;
+                  background-color: #0a0a0a;
+                  color: white;
+                  text-align: center;
+            }
+
+            .videos_Section video {
+                  width: 420px;
+                  height: 330px;
+                  display: block;
+                  margin: 2px 50px;
+                  padding: 0px 30px;
+            }
+
+            .videos {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  padding: 10px 20px;
+                  margin: 10px auto;
+                  width: 60%;
+            }
+
+            .video1 .video2 {
+                  padding: 0px 20px;
+                  margin: 0px 10px;
+            }
+
+            footer {
+                  background-color: #0a0a0a;
+                  color: white;
+                  width: 100%;
+            }
+
+            .container3 {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  width: 90%;
+                  margin: 20px 30px;
+            }
+
+            .logo_footer {
+                  width: 45%;
+                  margin: 10px 8px;
+                  padding: 4px 6px;
+            }
+
+            .logo_footer img {
+                  width: 30%;
+                  filter: invert(100%);
+            }
+
+            .part2 {
+                  width: 22%;
+                  margin: 10px 8px;
+                  padding: 4px 6px;
+            }
+
+            .part2 a {
+                  text-decoration: none;
+                  color: white;
+            }
+
+            .part2 a:hover {
+                  color: #b1a9a9;
+            }
+
+            .part3 {
+                  width: 23%;
+                  margin: 10px 8px;
+                  padding: 4px 6px;
+            }
+
+            .part3 img {
+                  width: 10%;
+            }
+
+            .part3 img:hover {
+                  transform: rotate(-30deg);
+                  cursor: pointer;
+            }
+
+            /* -----------Responsive --------- */
+            @media screen and (max-width:950px) {
+                  .nav_bar {
+                        flex-direction: column;
+                  }
+
+                  .nav_bar ul {
+                        flex-direction: column;
+                  }
+
+                  .search {
+                        flex-direction: column;
+                  }
+
+                  .videos {
+                        flex-direction: column;
+
+                  }
+
+                  .videos_Section video {
+                        width: 320px;
+                        height: 230px;
+                  }
+
+                  .container3 {
+                        flex-direction: column;
+                  }
+
+                  .logo_footer {
+                        width: 90%;
+                  }
+
+                  .part2 {
+                        width: 90%;
+                  }
+
+                  .part3 {
+                        width: 100%;
+                  }
+
+                  .burger {
+                        display: block;
+                  }
+
+                  .V-Responsive {
+                        opacity: 0;
+                  }
+
+                  .H-Responsive {
+                        height: 130px;
+                  }
+
+            }
+
+            /* ______________________________________________________________ */
+
+            @media screen and (max-width:884px) {
+
+                  .headbar_main {
+                        flex-direction: column;
+                  }
+
+                  .head_bar {
+                        margin: 2px 0px;
+                        font-size: 0.6rem;
+                  }
+
+                  .head_bar a {
+                        font-size: 0.6rem;
+
+                  }
+
+                  .main {
+                        flex-direction: column;
+                  }
+
+                  .caption {
+                        width: 80%;
+                  }
+
+                  .container {
+                        width: 100%;
+                  }
+
+                  .text {
+                        padding: 0px 4px;
+                        width: 111%;
+                  }
+
+                  .text-r {
+                        padding: 0px 4px;
+                        width: 111%;
+                  }
+
+                  .caption h1 {
+                        font-size: 2rem;
+                  }
+
+                  .btn2 {
+                        font-size: 0.9rem;
+                        margin: 5px 2px;
+                        padding: 8px 20px;
+                  }
+
+                  .heading {
+                        font-size: 1.4rem;
+                        text-align: center;
+                  }
+
+                  .container_2 {
+                        flex-direction: column;
+                  }
+
+                  .container_2 img {
+                        width: 80%;
+                        margin: 20px 4px;
+
+                  }
+
+                  .container3 {
+                        /* flex-direction: column; */
+                        justify-content: center;
+                  }
+            }
+      </style>
+
+
+
+</head>
+
+<body>
+      <header>
+            <div class="headbar_main">
+                  <div class="head_bar">
+                        <p>| Call us on :<a href="tel:809-909-101"> 809-909-101 |</a></p>
+                  </div>
+                  <div class="head_bar">
+                        <p> | Write us on :<a href="mailto:care@wow.com">care@wow.com |</a></p>
+                  </div>
+                  <div class="head_bar">
+                        <p> | Visit us :<a href="#">Ulica 123, Ljubljana Slovenia - 1000 |</a></p>
+                  </div>
+            </div>
+            <div class="navbar">
+                  <div class="logo hide">
+                        <img src="./Tech-img/Logo.png" alt="" srcset="">
+                  </div>
+                  <div class="navmenu hide">
+                        <li><a class="menu-items" href="/home">Home</a></li>
+                        <li><a class="menu-items" href="/home">About</a></li>
+                        <li><a class="menu-items" href="/home">Services</a></li>
+                        <li><a class="menu-items" href="/home">Products</a></li>
+                        <li><a class="menu-items" href="/home">Contact</a></li>
+                  </div>
+                  <div class="social-media hide">
+                        <div class="iconFb"><i class="fab fa-facebook-square"></i></div>
+                        <div class="iconYt"><i class="fab fa-youtube"></i></div>
+                        <div class="iconTw"><i class="fab fa-twitter-square"></i> </div>
+
+                  </div>
+                  <div class="burger">
+                        <div class="burger-item " id="burger"><i class="fas fa-bars"></i></div>
+                        <div class="close-item " id="burger-close"><i class="fas fa-times"></i></div>
+
+                  </div>
+            </div>
+
+      </header>
+
+      <!-- -----first section ------ -->
+      <div class="main">
+            <div>
+                  <div class="container">
+                        <img src="./Tech-img/pic1.png" alt="">
+                  </div>
+
+            </div>
+            <div class="caption">
+                  <h1>NEXT GENT TECHNOLOGY</h1>
+
+                  <hr>
+
+                  <h2>FAST | RELIABLE | DELIVERENCE | GEEKS</h2>
+                  <P>The word "technology" can also be used to refer to a collection of techniques. In this context, it
+                        is the current state of humanity's knowledge of how to combine resources to produce desired
+                        products, to solve problems, fulfill needs, or satisfy wants; it includes technical methods,
+                        skills, processes, techniques, tools and raw materials. When combined with another term, such as
+                        "medical technology" or "space technology," it refers to the state of the respective field's
+                        knowledge and tools. </P>
+                  <div class="btnbox">
+                        <button class="btn2">Connects to our Experts</button>
+                        <button class="btn2">Ask a query</button>
+
+                  </div>
+
+            </div>
+      </div>
+
+
+      <!-- -----first section finished------ -->
+      <!-- -----Services display Started------ -->
+
+      <div class="heading">
+            <h1>LIVE THE UNBELIEVABLE</h1>
+      </div>
+
+
+      <div class="container_2">
+
+            <div class="text">
+                  <h1>Virtual Reality</h1>
+
+                  <hr class="hr_2">
+
+                  <p>The history of technology is the history of the invention of tools and techniques and is one of the
+                        categories of world history. Technology can refer to methods ranging from as simple as stone
+                        tools to the complex genetic engineering and information technology that has emerged since the
+                        1980s. The term technology comes from the Greek word techne.
+                  </p>
+            </div>
+            <img src="./Tech-img/pic3.jpg" alt="">
+      </div>
+
+
+
+      <div class="container_2">
+            <img src="./Tech-img/pic6.jpg" alt="">
+
+            <div class="text-r">
+                  <h1>Live Robots</h1>
+
+                  <hr class="hr_3">
+
+                  <p>The history of technology is the history of the invention of tools and techniques and is one of the
+                        categories of world history. Technology can refer to methods ranging from as simple as stone
+                        tools to the complex genetic engineering and information technology that has emerged since the
+                        1980s. The term technology comes from the Greek word techne.</p>
+            </div>
+      </div>
+
+
+      <div class="container_2">
+
+
+            <div class="text">
+                  <h1>Game Stations</h1>
+
+                  <hr class="hr_2">
+
+                  <p>The history of technology is the history of the invention of tools and techniques and is one of the
+                        categories of world history. Technology can refer to methods ranging from as simple as stone
+                        tools to the complex genetic engineering and information technology that has emerged since the
+                        1980s. The term technology comes from the Greek word techne..</p>
+            </div>
+            <img src="./Tech-img/pic4.jpg" alt="">
+      </div>
+
+
+
+      <div class="container_2">
+            <img src="./Tech-img/pic5.jpg" alt="">
+
+
+            <div class="text-r">
+                  <h1>Precise Development</h1>
+
+                  <hr class="hr_3">
+
+                  <p>The history of technology is the history of the invention of tools and techniques and is one of the
+                        categories of world history. Technology can refer to methods ranging from as simple as stone
+                        tools to the complex genetic engineering and information technology that has emerged since the
+                        1980s. The term technology comes from the Greek word techne..</p>
+            </div>
+      </div>
+
+
+
+
+      <div class="videos_Section">
+
+            <h1>Watch Our Videos</h1>
+            <!-- video had no voice -->
+            <div class="videos">
+                  <div class="video1">
+                        <video controls src="./Tech-img/bv.mp4"></video>
+                  </div>
+                  <div class="video2">
+                        <video controls src="./Tech-img/bv.mp4"></video>
+
+                  </div>
+            </div>
+
+      </div>
+
+
+
+      <footer>
+            <div class="container3">
+                  <div class="logo_footer">
+                        <img src="./Tech-img/Logo.png" alt="">
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptate repudiandae totam
+                              repellat iure mollitia dolorem accusantium quibusdam nam cupiditate ipsa at? Sequi dolore
+                              nisi delectus obcaecati provident quos, a qui incidunt cupiditate, odio laboriosam?</p>
+                  </div>
+                  <div class="part2">
+                        <h3>Our Products</h3>
+                        <li><a href=""> Product</a> </li>
+                        <li><a href=""> Product</a> </li>
+                        <li><a href=""> Product</a> </li>
+                        <li><a href=""> Product</a> </li>
+                        <li><a href=""> Product</a> </li>
+                  </div>
+                  <div class="part3">
+                        <h3>Follow us on Social Media</h3>
+                        <div class="social">
+                              <img src="./Tech-img/Social Media Icon/facebook.png" alt="Facebook">
+                              <img src="./Tech-img/Social Media Icon/instagram.png" alt=Instagram"">
+                              <img src="./Tech-img/Social Media Icon/linkedin.png" alt="Linkdin">
+                              <img src="./Tech-img/Social Media Icon/snapchat.png" alt="Snapchat">
+                              <img src="./Tech-img/Social Media Icon/twitter.png" alt="Twitter">
+                              <img src="./Tech-img/Social Media Icon/youtube.png" alt="YouTube">
+                        </div>
+                  </div>
+            </div>
+      </footer>
+
+
+      <!-- <script src="/js/main.js"></script> -->
+
+      <script>
+            const logo = document.querySelector(".logo");
+            const navmenu = document.querySelector(".navmenu");
+            const socialMedia = document.querySelector(".social-media");
+            const burgerDisplay = document.querySelector("#burger");
+            const burgerClose = document.querySelector("#burger-close");
+
+            burgerDisplay.addEventListener("click", () => {
+                  logo.classList.remove("hide");
+                  navmenu.classList.remove("hide");
+                  socialMedia.classList.remove("hide");
+                  burgerDisplay.style.display = "none";
+                  burgerClose.style.display = "block";
+            });
+            burgerClose.addEventListener("click", () => {
+                  logo.classList.add("hide");
+                  navmenu.classList.add("hide");
+                  socialMedia.classList.add("hide");
+                  burgerClose.style.display = "none";
+                  burgerDisplay.style.display = "block";
+            });
+
+            burgerClose.style.display = "none";
+            burgerDisplay.style.visibility = "none";
+
+      </script>
+
+
+</body>
+
+</html>
