@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SASS Website</title>
+      <link rel="stylesheet" href="/styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+      <style>
+            @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            .navbar {
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  /* border: 1px solid #fc7c1a; */
+            }
+
+            /* ----Logo-- */
+            .logo {
+                  width: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .logo .fab {
+                  font-size: 3rem;
+                  padding: 8px 10px;
+                  color: #fc7c1a;
+                  cursor: pointer;
+            }
+
+            .logo img:hover {
+                  filter: grayscale(1);
+            }
+
+            /* ---Menu items --- */
+            .navmenu {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 40%;
+            }
+
+            .navmenu .menu-items {
+                  text-decoration: none;
+                  color: #fc7c1a;
+                  /* color: rgb(130, 201, 30); */
+                  font-size: 1.4rem;
+                  font-weight: 600;
+                  margin: 0px 10px;
+            }
+
+            .navmenu .menu-items:hover {
+                  color: grey;
+            }
+
+            .navmenu {
+                  list-style: none;
+            }
+
+            /* _____Social__________ */
+
+            .sign-up {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  color: #fc7c1a;
+                  font-size: 2rem;
+                  padding: 20px 8px;
+                  width: 40%;
+            }
+
+            .sign-up .btn {
+                  margin: 0.1rem 2rem;
+                  font-size: 1.2rem;
+                  padding: 6px 26px;
+                  border-radius: 11px;
+                  color: white;
+                  background-color: #fc7c1a;
+                  border: 2px solid #fc7c1a;
+                  cursor: pointer;
+            }
+
+            .sign-up .btn:hover {
+                  background-color: white;
+                  color: #fc7c1a;
+                  border: 2px solid #fc7c1a;
+                  -webkit-transition: all 0.8s ease;
+                  transition: all 0.8s ease;
+                  cursor: pointer;
+            }
+
+            .social-media {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  cursor: pointer;
+            }
+
+            .social-media i {
+                  padding: 0px 8px;
+            }
+
+            .iconFb :hover {
+                  color: rgb(7, 119, 233);
+                  cursor: pointer;
+            }
+
+            .iconYt :hover {
+                  color: rgb(244, 22, 22);
+                  cursor: pointer;
+            }
+
+            /* -------Burger ---- */
+            .burger {
+                  position: absolute;
+                  top: 15px;
+                  right: 5%;
+                  font-size: 3rem;
+                  color: silver;
+                  margin: 0px auto;
+                  cursor: pointer;
+            }
+
+            .burger-item {
+                  opacity: 0;
+            }
+
+            .burger-item:hover {
+                  transform: scale(1.2);
+                  transition: all 0.3s ease-in-out;
+            }
+
+            .close-item {
+                  color: silver;
+                  position: absolute;
+                  top: 0px;
+                  right: 5%;
+                  transform: skew(5, 4);
+                  opacity: 0;
+            }
+
+            .close-item :hover {
+                  transform: rotate(90deg) scale(1.2);
+                  transition: all 0.8s ease-out;
+                  color: grey;
+            }
+
+            /* ____________Screen _________ */
+
+            @media screen and (max-width: 900px) {
+                  .navbar {
+                        flex-direction: column;
+                  }
+
+                  .navmenu {
+                        flex-direction: column;
+                        margin: 0 auto;
+                        display: block;
+                        width: 100%;
+                        background-color: rgb(243, 237, 237);
+                  }
+
+                  .navmenu li {
+                        width: 100%;
+                        text-align: center;
+                  }
+
+                  .logo {
+                        background-color: rgb(243, 237, 237);
+                        width: 100%;
+                  }
+
+                  .sign-up {
+                        background-color: rgb(243, 237, 237);
+                        width: 100%;
+                  }
+
+                  .hide {
+                        transform: translate(-800px, 0px);
+                        transition: all 0.5s ease-in-out;
+                        /* display: none; */
+                  }
+
+                  .show {
+                        transform: translate(0px, 0px);
+                        transition: all 0.5s ease-in-out;
+                  }
+
+                  .burger-item {
+                        opacity: 1;
+                  }
+
+                  .close-item {
+                        opacity: 1;
+                  }
+
+                  .sign-up {
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                  }
+            }
+
+            /* ______________________ */
+
+            /* ______________________ */
+
+            .container {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                  justify-content: space-between;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  padding: 40px 20px;
+                  /* height: 88vh; */
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container {
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                        padding: 6px 20px;
+                        /* height: 48vh; */
+                  }
+            }
+
+            .container .caption {
+                  width: 60%;
+                  margin-left: 40px;
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                  justify-content: center;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  -webkit-box-orient: vertical;
+                  -webkit-box-direction: normal;
+                  -ms-flex-direction: column;
+                  flex-direction: column;
+            }
+
+            .container .caption h1 {
+                  font-size: 3.8rem;
+                  color: #fc7c1a;
+                  font-weight: bolder;
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container .caption h1 {
+                        font-size: 3rem;
+                        text-align: center;
+                  }
+            }
+
+            .container .caption h2 {
+                  font-size: 3rem;
+                  color: #fc7c1a;
+                  font-weight: bolder;
+                  text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container .caption h2 {
+                        font-size: 2.5rem;
+                        text-align: center;
+                  }
+            }
+
+            .container .caption p {
+                  font-size: 2.6rem;
+                  text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container .caption p {
+                        font-size: 2rem;
+                  }
+            }
+
+            .container .caption .btn {
+                  margin: 15px 0px;
+                  font-size: 3rem;
+                  padding: 6px 26px;
+                  border-radius: 11px;
+                  color: white;
+                  background-color: #fc7c1a;
+                  border: 2px solid #fc7c1a;
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container .caption .btn {
+                        font-size: 3.5rem;
+                        padding: 2px 6px;
+                  }
+            }
+
+            .container .caption .btn:hover {
+                  background-color: white;
+                  color: #fc7c1a;
+                  border: 2px solid #fc7c1a;
+                  -webkit-transition: all 0.8s ease;
+                  transition: all 0.8s ease;
+                  cursor: pointer;
+            }
+
+            .container .pic {
+                  display: block;
+                  margin: 0px auto 10px auto;
+                  width: 70%;
+                  z-index: -1;
+            }
+
+            .container .pic img {
+                  width: 110%;
+                  padding: 4px 10px;
+            }
+
+            @media screen and (max-width: 768px) {
+                  .container .pic img {
+                        width: 100%;
+                  }
+            }
+
+            /*# sourceMappingURL=style.css.map */
+      </style>
+</head>
+
+<body>
+      <header>
+            <div class="navbar">
+                  <div class="logo hide">
+                        <i class="fab fa-reddit-alien"></i>
+                  </div>
+                  <div class="navmenu hide">
+                        <li><a class="menu-items" href="/home">Home</a></li>
+                        <li><a class="menu-items" href="/home">Services</a></li>
+                        <li><a class="menu-items" href="/home">Products</a></li>
+                        <li><a class="menu-items" href="/home">Contact</a></li>
+                  </div>
+                  <div class="sign-up hide">
+                        <button class="btn">Sign Up</button>
+                        <div class="social-media">
+                              <div class="iconFb"><i class="fab fa-facebook-square"></i></div>
+                              <div class="iconYt"><i class="fab fa-youtube"></i></div>
+                        </div>
+
+                  </div>
+                  <div class="burger">
+                        <div class="burger-item " id="burger"><i class="fas fa-bars"></i></div>
+                        <div class="close-item " id="burger-close"><i class="fas fa-times"></i></div>
+
+                  </div>
+            </div>
+
+      </header>
+
+
+      <div class="container">
+            <div class="caption">
+                  <h1>Get ready</h1>
+                  <h2>Play Full Alien Game</h2>
+                  <p>Sign up now to join them</p>
+
+                  <button class="btn">Sign Up</button>
+            </div>
+
+            <div class="pic">
+                  <img src="./hero-page-alien.png" alt="alien">
+            </div>
+      </div>
+
+      <!-- <script src="./js/main.js"></script> -->
+
+      <script>
+            // ----------------------
+
+            const logo = document.querySelector(".logo");
+            const navmenu = document.querySelector(".navmenu");
+            const signUp = document.querySelector(".sign-up");
+            const burgerDisplay = document.querySelector("#burger");
+            const burgerClose = document.querySelector("#burger-close");
+
+            burgerDisplay.addEventListener("click", () => {
+                  logo.classList.add("show");
+                  navmenu.classList.add("show");
+                  signUp.classList.add("show");
+                  burgerDisplay.style.display = "none";
+                  burgerClose.style.display = "block";
+            });
+            burgerClose.addEventListener("click", () => {
+                  logo.classList.remove("show");
+                  navmenu.classList.remove("show");
+                  signUp.classList.remove("show");
+                  burgerClose.style.display = "none";
+                  burgerDisplay.style.display = "block";
+            });
+
+            burgerClose.style.display = "none";
+            burgerDisplay.style.visibility = "none";
+
+      </script>
+
+</body>
+
+</html>

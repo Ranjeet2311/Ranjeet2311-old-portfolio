@@ -73,31 +73,17 @@ const webTemplatesProjectList = [
   },
   {
     id: 4,
-    img: "/app-banner/modal.jpg",
-    title: "Website 4",
+    img: "/app-banner/game-sign-up.png",
+    title: "Game-sign-up",
     code: "http://google.com/",
-    demo: "/app-demo/modal.html",
-  },
-  {
-    id: 5,
-    img: "/app-banner/play-music.jpg",
-    title: "Website 5",
-    code: "http://google.com/",
-    demo: "/app-demo/play-music.html",
+    demo: "/app-demo/hero-page.html",
   },
   // {
-  //   id: 6,
-  //   img: "/app-banner/music-player.jpg",
-  //   title: "Music player",
+  //   id: 5,
+  //   img: "/app-banner/play-music.jpg",
+  //   title: "Website 5",
   //   code: "http://google.com/",
-  //   demo: "/app-demo/music-player.html",
-  // },
-  // {
-  //   id: 7,
-  //   img: "/app-banner/counter.jpg",
-  //   title: "Counter",
-  //   code: "http://google.com/",
-  //   demo: "/app-demo/counter.html",
+  //   demo: "/app-demo/play-music.html",
   // },
 ];
 
