@@ -4,7 +4,13 @@ const burger = document.querySelector(".burger");
 const avatarContainer = document.querySelector(".Avatar-Home");
 const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
-let webAppProjectLinks = document.querySelector(".web-app-project-links");
+const blink = document.querySelector(".blink");
+const faDotCircle = document.querySelector(".fa-dot-circle");
+// let webAppProjectLinks = document.querySelector(".web-app-project-links");
+
+setInterval(() => {
+  faDotCircle.classList.toggle("blink");
+}, 1000);
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");
