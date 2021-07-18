@@ -1,18 +1,15 @@
 const nav = document.querySelector(".nav-menu");
-const Git = document.querySelector(".Git");
+// const Git = document.querySelector(".Git");
 const burger = document.querySelector(".burger");
 const avatarContainer = document.querySelector(".Avatar-Home");
 const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
 let webAppProjectLinks = document.querySelector(".web-app-project-links");
 
-// document.addEventListener("DOMContentLoaded", function () {
-// });
-
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");
   nav.classList.toggle("N-height");
-  Git.classList.toggle("V-opacity");
+  // Git.classList.toggle("V-opacity");
 });
 
 avatarContainer.addEventListener("mouseover", () => {

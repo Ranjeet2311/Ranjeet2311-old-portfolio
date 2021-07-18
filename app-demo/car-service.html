@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Car Services | Best Place</title>
+      <!-- <link rel="stylesheet" href="/css/style.css"> -->
+      <!-- <link rel="stylesheet" href="/css/mediaQuery.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- stylesheet ---------- -->
+
+      <style>
+            /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"); */
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            }
+
+            header {
+                  background: linear-gradient(to right, #004e92, #000428);
+            }
+
+            .navbar {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+            }
+
+            /* ----Logo-- */
+            .logo {
+                  width: 10%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  /* margin: 0rem 3rem; */
+            }
+
+            .logo .fas {
+                  font-size: 3rem;
+                  margin: 2px auto;
+                  padding: 2px 10px;
+                  cursor: pointer;
+                  color: white;
+            }
+
+            .logo img:hover {
+                  filter: grayscale(1);
+            }
+
+            /* ---Menu items --- */
+            .navmenu {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+            }
+
+            .navmenu li {
+                  margin: 1.5rem 0rem;
+                  width: 100%;
+            }
+
+            .navmenu .menu-items {
+                  text-decoration: none;
+                  padding: 0.4rem 1.2rem;
+                  margin: 1rem;
+                  color: white;
+                  font-size: 1.5rem;
+                  background: linear-gradient(to right, #004e92, #000428);
+                  cursor: pointer;
+                  border: 1px solid white;
+                  border-radius: 12px;
+                  box-shadow: 10px 10px 10px #004e92;
+            }
+
+            .navmenu .menu-items:hover {
+                  background: linear-gradient(to right, #000428, #004e92);
+                  box-shadow: 0px 0px 0px #004e92;
+            }
+
+            .navmenu .menu-items:hover {
+                  border-bottom: 1px solid white;
+            }
+
+            .navmenu .menu-items:hover {
+                  color: grey;
+            }
+
+            .navmenu {
+                  list-style: none;
+            }
+
+            /* -------Burger ---- */
+            .burger {
+                  position: absolute;
+                  top: 15px;
+                  right: 5%;
+                  font-size: 3rem;
+                  color: silver;
+                  margin: 0px auto;
+                  cursor: pointer;
+                  z-index: 1;
+            }
+
+            .burger-item {
+                  opacity: 0;
+            }
+
+            .burger-item:hover {
+                  transform: scale(1.2);
+                  transition: all 0.3s ease-in-out;
+            }
+
+            .close-item {
+                  color: silver;
+                  position: absolute;
+                  top: 0px;
+                  right: 5%;
+                  transform: skew(5, 4);
+                  opacity: 0;
+                  z-index: 1;
+            }
+
+            .close-item :hover {
+                  transform: rotate(90deg) scale(1.2);
+                  transition: all 0.8s ease-out;
+                  color: grey;
+            }
+
+            /* ____________Screen _________ */
+
+            @media screen and (max-width: 900px) {
+                  .navbar {
+                        flex-direction: column;
+                  }
+
+                  header {
+                        padding: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                  }
+
+                  .navmenu {
+                        flex-direction: column;
+                        margin: 0 auto;
+                        display: block;
+                        width: 100%;
+                  }
+
+                  .navmenu .menu-items {
+                        margin: 2rem 0rem;
+                  }
+
+                  .navmenu li {
+                        width: 100%;
+
+                        text-align: center;
+                  }
+
+                  .hide {
+                        display: none;
+                  }
+
+                  .burger-item {
+                        opacity: 1;
+                  }
+
+                  .close-item {
+                        opacity: 1;
+                  }
+
+                  .main {
+                        flex-direction: column;
+                  }
+
+
+                  .container {
+                        flex-direction: column;
+                  }
+            }
+
+            /* ______________________ */
+
+            /* ______________Hero image/___________________ */
+
+
+
+            .hero-wrapper {
+                  width: 100vw;
+                  height: 100vh;
+                  opacity: 0.8;
+                  background-image: url(./car-img/auto-2179220_1920.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  /* opacity: 0.4; */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .hero-container {
+                  width: 80%;
+                  color: white;
+                  background: rgb(0, 0, 0);
+                  padding: 1rem 1rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+            }
+
+            .hero-container h1 {
+                  font-size: 2rem;
+                  padding: 4px 4px;
+            }
+
+            .hero-container h3 {
+                  font-size: 1.5rem;
+            }
+
+            .hero-container hr {
+                  width: 60%;
+            }
+
+            .hero-wrapper .btn {
+                  padding: 0.8rem 1rem;
+                  margin: 1rem;
+                  color: white;
+                  font-size: 1.5rem;
+                  font-weight: 800;
+                  background: linear-gradient(to right, #004e92, #000428);
+                  cursor: pointer;
+                  border-radius: 12px;
+                  box-shadow: 10px 10px 10px #004e92;
+                  border: 1px solid white;
+            }
+
+            .btn:hover {
+                  background: linear-gradient(to right, #000428, #004e92);
+                  box-shadow: 0px 0px 0px #004e92;
+                  /* border: 1px solid white; */
+            }
+
+            /* ___________Main body starts------- */
+
+            header {
+                  /* padding: 40px; */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+            }
+
+            header h1 {
+                  font-size: 3.6rem;
+                  padding: 4px 4px;
+                  color: white;
+            }
+
+            header p {
+                  font-size: 2rem;
+                  color: white;
+            }
+
+            header hr {
+                  background: white;
+                  width: 40%;
+            }
+
+            /* _____________________main ______________ */
+
+            .main {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                  padding: 4px 20px;
+                  margin: 3rem 0rem;
+            }
+
+            .child {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  width: 40%;
+                  padding: 20px;
+                  box-shadow: 8px 8px 40px black;
+                  border-radius: 8px;
+                  margin: 1rem;
+            }
+
+            .child:hover {
+                  color: rgb(8, 8, 8);
+                  cursor: pointer;
+            }
+
+            .child img {
+                  width: 35%;
+                  filter: drop-shadow(2px 4px 6px #032e8b);
+            }
+
+            .child img:hover {
+                  width: 35%;
+                  transform: translate(-50px, 0px);
+                  transition: all 0.6s ease;
+            }
+
+            .child h1 {
+                  font-size: 2.5;
+                  color: #080808;
+            }
+
+            .child p {
+                  font-size: 2.5;
+                  color: #080808;
+            }
+
+            .child hr {
+                  background: black;
+                  padding: 2px;
+                  width: 60%;
+            }
+
+            /* __________footer-------------- */
+
+            .container {
+                  width: 100%;
+                  color: white;
+                  background: #000428;
+                  /* fallback for old browsers */
+                  background: -webkit-linear-gradient(to right,
+                              #004e92,
+                              #000428);
+                  /* Chrome 10-25, Safari 5.1-6 */
+                  background: linear-gradient(to right,
+                              #004e92,
+                              #000428);
+                  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+
+            .container h2 {
+                  font-size: 1rem;
+            }
+
+            .foot {
+                  margin: 30px 100px;
+                  padding: 2px 4px;
+            }
+
+            .foot h2 {
+                  font-size: 2rem;
+                  padding: 2px 4px;
+            }
+
+            .foot li {
+                  font-size: 1.6rem;
+                  padding: 2px 4px;
+            }
+
+            .foot li:hover {
+                  cursor: pointer;
+            }
+
+            .footer-note {
+                  color: white;
+                  padding: 4px 6px;
+                  margin: 2px 8px;
+                  text-align: center;
+                  background: rgb(0, 4, 40);
+                  /* fallback for old browsers */
+                  background: -webkit-linear-gradient(to right,
+                              #004e92,
+                              #000428);
+                  /* Chrome 10-25, Safari 5.1-6 */
+                  background: linear-gradient(to right,
+                              #004e92,
+                              #000428);
+                  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+                  /* ------responsive ----- */
+
+                  @media screen and (max-width: 750px) {
+                        .navbar {
+                              flex-direction: column;
+                              transform: translate(-10);
+                        }
+
+                        .navlist {
+                              flex-direction: column;
+                        }
+
+                        .caption {
+                              display: none;
+                        }
+
+                        .v-Responsive {
+                              opacity: 0;
+                        }
+
+                        .h-responsive {
+                              height: 130px;
+                        }
+
+                        .burger {
+                              display: block;
+                        }
+
+                  }
+
+
+            }
+      </style>
+
+
+
+</head>
+
+<body>
+      <header>
+            <div class="navbar">
+                  <div class="logo hide">
+                        <i class="fas fa-car"></i>
+                  </div>
+                  <div class="navmenu hide">
+                        <li><a class="menu-items" href="/home">Home</a></li>
+                        <li><a class="menu-items" href="/home">About</a></li>
+                        <li><a class="menu-items" href="/home">Services</a></li>
+                        <li><a class="menu-items" href="/home">Products</a></li>
+                        <li><a class="menu-items" href="/home">Contact</a></li>
+                  </div>
+                  <!-- <div class="social-media hide">
+                        <div class="iconFb"><i class="fab fa-facebook-square"></i></div>
+                        <div class="iconYt"><i class="fab fa-youtube"></i></div>
+                        <div class="iconTw"><i class="fab fa-twitter-square"></i> </div>
+
+                  </div> -->
+                  <div class="burger">
+                        <div class="burger-item " id="burger"><i class="fas fa-bars"></i></div>
+                        <div class="close-item " id="burger-close"><i class="fas fa-times"></i></div>
+
+                  </div>
+            </div>
+
+      </header>
+
+      <!-- ____________Navigation finished ______________ -->
+
+      <div class="hero-wrapper">
+            <div class="hero-container">
+                  <h1>LOVING & PAMPERING CARS IS OUR BUSINESS</h1>
+                  <hr>
+                  <h3>Providing services since 1980. Cars is a 2006 American computer-animated comedy Pixar, A car (or
+                        automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads</h3>
+
+                  <div class="hero-btns">
+                        <button class="btn">Book Appointment</button>
+                        <button class="btn">Connect</button>
+
+                  </div>
+            </div>
+      </div>
+
+
+
+
+      <!-- _________________Main body Starts--------------- -->
+
+      <header>
+            <h1>Our Services</h1>
+            <hr>
+            <p>You will love it</p>
+      </header>
+
+
+      <div class="main">
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Car Repair</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads!</p>
+            </div>
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Color Fixing</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads!</p>
+            </div>
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Modification</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads!</p>
+            </div>
+      </div>
+      <div class="main">
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Accessories</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads!</p>
+            </div>
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Basic Service</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads!</p>
+            </div>
+            <div class="child">
+                  <img src="./car-img/car.png" alt="">
+                  <hr>
+                  <h1>Dent Fixing</h1>
+                  <p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars
+                        say that they run primarily on roads </p>
+            </div>
+      </div>
+
+      <!-- __________footer______________ -->
+
+      <footer>
+            <div class="container">
+                  <div class="foot">
+                        <h2>Our Products</h2>
+                        <hr>
+                        <ul>
+                              <li>Oil</li>
+                              <li>Gear</li>
+                              <li>Clutch</li>
+                              <li>race</li>
+                        </ul>
+                  </div>
+                  <div class="foot">
+                        <h2>Our Products</h2>
+                        <hr>
+                        <ul>
+                              <li>Oil</li>
+                              <li>Gear</li>
+                              <li>Clutch</li>
+                              <li>race</li>
+                        </ul>
+                  </div>
+                  <div class="foot">
+                        <h2>Our Products</h2>
+                        <hr>
+                        <ul>
+                              <li>Oil</li>
+                              <li>Gear</li>
+                              <li>Clutch</li>
+                              <li>race</li>
+                        </ul>
+                  </div>
+            </div>
+
+      </footer>
+      <div class="footer-note">All rights reserved &copy;Excell company</div>
+
+
+      <!-- <script src="/js/main.js"></script> -->
+
+      <script>
+            // ----------------------
+
+            const logo = document.querySelector(".logo");
+            const navmenu = document.querySelector(".navmenu");
+            // const socialMedia = document.querySelector(".social-media");
+            const burgerDisplay = document.querySelector("#burger");
+            const burgerClose = document.querySelector("#burger-close");
+
+            burgerDisplay.addEventListener("click", () => {
+                  logo.classList.remove("hide");
+                  navmenu.classList.remove("hide");
+                  // socialMedia.classList.remove("hide");
+                  burgerDisplay.style.display = "none";
+                  burgerClose.style.display = "block";
+            });
+            burgerClose.addEventListener("click", () => {
+                  logo.classList.add("hide");
+                  navmenu.classList.add("hide");
+                  // socialMedia.classList.add("hide");
+                  burgerClose.style.display = "none";
+                  burgerDisplay.style.display = "block";
+            });
+
+            burgerClose.style.display = "none";
+            burgerDisplay.style.visibility = "none";
+
+      </script>
+
+</body>
+
+</html>

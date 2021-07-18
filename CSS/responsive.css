@@ -32,7 +32,9 @@
   }
 
   .V-opacity {
-    opacity: 0;
+    /* opacity: 0; */
+    transform: translate(-700px, 0px);
+    transition: all 0.1s ease-in-out;
   }
 
   .N-height {
@@ -78,7 +80,18 @@
   .container .main .Sk-img {
     flex-direction: column;
   }
+
+  /* ----------Project -------------- */
+  .web-app-project-links,
+  .web-template-project-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
+
+/* ---------- */
 
 @media screen and (max-width: 460px) {
   .background .caption p {
@@ -87,5 +100,22 @@
 
   .background .caption .download {
     font-size: 0.8rem;
+  }
+  .scroll-wrapper .scroll-links .scroll-btns {
+    border: none;
+    margin: 1rem 0.5rem;
+    /* box-shadow: 8px 8px 14px rgb(80, 79, 79); */
+    background: cornflowerblue;
+  }
+  .scroll-wrapper .scroll-links .scroll-btns a {
+    text-decoration: none;
+    font-size: 1rem;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px black;
+    padding: 0.5rem;
+    cursor: pointer;
   }
 }
