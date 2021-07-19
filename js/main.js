@@ -10,7 +10,7 @@ const faDotCircle = document.querySelector(".fa-dot-circle");
 
 setInterval(() => {
   faDotCircle.classList.toggle("blink");
-}, 1000);
+}, 600);
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");

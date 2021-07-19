@@ -104,11 +104,12 @@ let webAppProjectLinks = document.querySelector(".web-app-project-links");
 let webTemplateProjectLinks = document.querySelector(
   ".web-template-project-links"
 );
+const faDotCircle = document.querySelector(".fa-dot-circle");
+faDotCircle.style.color = "white";
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");
   nav.classList.toggle("N-height");
-  // Git.classList.toggle("V-opacity");
 });
 
 // ---------Web App Project mapping ---
@@ -152,4 +153,125 @@ let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
 webTemplateProjectDisplay = webTemplateProjectDisplay.join("");
 webTemplateProjectLinks.innerHTML = webTemplateProjectDisplay;
 
-console.log(webTemplateProjectDisplay);
+// console.log(webTemplateProjectDisplay);
+
+// -----------------React project Display---------------
+
+const reactImages = [
+  {
+    id: 1,
+    img: "/reactScreenshots/React-web/React-home.png",
+    text: "React-Home",
+  },
+  {
+    id: 2,
+    img: "/reactScreenshots/React-web/React-services.png",
+    text: "React-services",
+  },
+  {
+    id: 3,
+    img: "/reactScreenshots/React-web/React-contact.png",
+    text: "React-contact",
+  },
+  {
+    id: 4,
+    img: "/reactScreenshots/React-web/React-about-us.png",
+    text: "React-about-us",
+  },
+  {
+    id: 5,
+    img: "/reactScreenshots/React-web/React-smartphone-burger.png",
+    text: "React-smartphone-burger",
+  },
+  {
+    id: 6,
+    img: "/reactScreenshots/React-web/React-smartphone-close.png",
+    text: "React-smartphone-close",
+  },
+];
+
+// ------------React --website --
+const image = document.querySelector("#image");
+const reactTitle = document.querySelector("#reactTitle");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+let currentItem = 0;
+
+image.src = reactImages[currentItem].img;
+reactTitle.textContent = reactImages[currentItem].text;
+
+function slideShow() {
+  reactImages[currentItem];
+  image.src = reactImages[currentItem].img;
+  reactTitle.textContent = reactImages[currentItem].text;
+}
+
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem >= reactImages.length) {
+    currentItem = 0;
+  }
+  slideShow();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reactImages.length - 1;
+  }
+  slideShow();
+});
+
+// -----------------------------React-menu ---------------------
+
+const menuImages = [
+  {
+    id: 1,
+    pic: "/reactScreenshots/React-menu/react-menu-main-home.png",
+    text: "Menu-home",
+  },
+  {
+    id: 2,
+    pic: "/reactScreenshots/React-menu/react-menu-home.png",
+    text: "Smart device burger",
+  },
+  {
+    id: 3,
+    pic: "/reactScreenshots/React-menu/react-menu-smart.png",
+    text: "Menu Display",
+  },
+];
+
+const menuImage = document.querySelector(".image");
+const menuTitle = document.querySelector(".reactTitle");
+const menuPrevBtn = document.querySelector(".menu-prev-btn");
+const menuNextBtn = document.querySelector(".menu-next-btn");
+
+let currentImg = 0;
+
+menuImage.src = menuImages[currentImg].pic;
+menuTitle.textContent = menuImages[currentImg].text;
+
+function menuSlideShow() {
+  menuImages[currentImg];
+  menuImage.src = menuImages[currentImg].pic;
+  menuTitle.textContent = menuImages[currentImg].text;
+}
+
+menuPrevBtn.addEventListener("click", function () {
+  currentImg--;
+  if (currentImg < 0) {
+    currentImg = menuImages.length - 1;
+  }
+  menuSlideShow();
+  console.log(123);
+});
+menuNextBtn.addEventListener("click", function () {
+  currentImg++;
+  if (currentImg >= menuImages.length) {
+    currentImg = 0;
+  }
+  menuSlideShow();
+  console.log(123);
+});
