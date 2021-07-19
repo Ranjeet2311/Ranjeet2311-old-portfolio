@@ -105,7 +105,7 @@ let webTemplateProjectLinks = document.querySelector(
   ".web-template-project-links"
 );
 const faDotCircle = document.querySelector(".fa-dot-circle");
-faDotCircle.style.color = "white";
+faDotCircle.classList.remove("blink");
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");
