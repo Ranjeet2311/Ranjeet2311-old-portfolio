@@ -195,7 +195,7 @@
                   }
 
                   fetch(
-                        `https://cors-anywhere.herokuapp.com//https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
+                        `https://cors-anywhere.herokuapp.com//http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
                   )
                         .then((res) => res.json())
                         .then((data) => {
@@ -221,7 +221,7 @@
                               let icon = data.weather[0].icon;
                               weatherIcon.setAttribute(
                                     "src",
-                                    `https://openweathermap.org/img/wn/${icon}@4x.png`
+                                    `http://openweathermap.org/img/wn/${icon}@4x.png`
                               );
                               // ---Weather Description insertion --
                               weatherDesc.innerHTML = `            <div class="data-main">
