@@ -10,7 +10,7 @@ const webAppProjectList = [
     id: 2,
     img: "/app-banner/Weather.jpg",
     title: "Weathe App",
-    code: "https://github.com/Ranjeet2311/Counter-",
+    code: "https://github.com/Ranjeet2311/Weather-App",
     demo: "/app-demo/weather.html",
   },
   {
