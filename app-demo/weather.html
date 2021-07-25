@@ -195,12 +195,15 @@
                   }
 
                   fetch(
-                        `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
+                        `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
                   )
                         .then((res) => res.json())
                         .then((data) => {
                               // ----Temperature conversion ---
-                              const { temp, temp_max } = data.main;
+                              // let { temp, temp_max } = data.main;
+                              let temp = data.main.temp
+                              let temp_max = data.main.temp_max
+
                               let tempCel = temp - 273.15;
                               let temp_maxCel = temp_max - 273.15;
 
@@ -221,7 +224,7 @@
                               let icon = data.weather[0].icon;
                               weatherIcon.setAttribute(
                                     "src",
-                                    `http://openweathermap.org/img/wn/${icon}@4x.png`
+                                    `https://openweathermap.org/img/wn/${icon}@4x.png`
                               );
                               // ---Weather Description insertion --
                               weatherDesc.innerHTML = `            <div class="data-main">
@@ -241,18 +244,18 @@
                   </div>
                   <div class="data-main">
                         <h2>Current Temp: </h2>
-                        <h1>${tempCel.toFixed(0)} °C </h1>
+                        <h1>${tempCel.toFixed(1)} °C </h1>
                   </div>
                   <div class="data-main">
                         <h2>Max-Temp: </h2>
-                        <h1>  ${temp_maxCel.toFixed(0)} °C </h1>
+                        <h1>  ${temp_maxCel.toFixed(1)} °C </h1>
                   </div>
             </div>
             <div class="data-sec">
 
                   <div class="data-sec">
                         <h2>Wind Speed: </h2> <h1>${speedKmH.toFixed(2)}
-                        )} km/h </h1>
+                        km/h </h1>
                   </div>
                   <div class="data-sec">
                         <h2>Humidity: </h2> <h1> ${data.main.humidity}% </h1>
