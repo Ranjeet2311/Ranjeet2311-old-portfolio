@@ -219,14 +219,17 @@
                   if (currentSong < 0) {
                         currentSong = audioLists.length - 1;
                   }
+                  playBtn.innerHTML = '<i class="fas fa-play"></i> ';
                   showMusic(currentSong);
             });
             nextBtn.addEventListener("click", () => {
                   currentSong++;
 
+
                   if (currentSong >= audioLists.length) {
                         currentSong = 0;
                   }
+                  playBtn.innerHTML = '<i class="fas fa-play"></i> ';
                   showMusic(currentSong);
             });
 
