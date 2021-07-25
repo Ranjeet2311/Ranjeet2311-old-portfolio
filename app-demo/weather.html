@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Weather App</title>
+
+
+      <!-- styel --- -->
+      <style>
+            * {
+                  padding: 0;
+                  margin: 0;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                  /* background-color: cadetblue; */
+            }
+
+            body {
+                  background-image: url(./weather-background.jpg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  height: 110vh;
+            }
+
+            .app-wrapper {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  width: 100%;
+            }
+
+            .app-items {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  padding: 0.6rem 1.5rem;
+                  box-shadow: 10px 10px 45px black;
+                  background-color: rgb(220, 219, 219);
+                  border: 2px solid black;
+            }
+
+            .input-box {
+                  margin: 1.8rem 0rem;
+                  padding: 0.8rem 1.5rem;
+                  box-shadow: 10px 10px 45px black;
+                  background-color: rgb(220, 219, 219);
+                  border: 2px solid black;
+                  width: 21rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+            }
+
+            form {
+                  display: flex;
+            }
+
+            .input-box h1 {
+                  font-size: 2rem;
+                  margin: 0.6rem 0rem;
+            }
+
+            #search {
+                  margin-right: 2rem;
+                  outline: none;
+                  border-radius: 0.2rem;
+                  padding: 0.1rem 0.4rem;
+            }
+
+            .btn {
+                  font-size: 0.8rem;
+                  font-weight: 800;
+                  padding: 0.1rem 0.4rem;
+                  box-shadow: 6px 6px 10px black;
+                  border-radius: 0.4rem;
+            }
+
+            .btn:hover {
+                  font-size: 0.8rem;
+                  font-weight: 800;
+                  padding: 0.1rem 0.4rem;
+                  box-shadow: 1px 1px 1px black;
+            }
+
+            .first-sec {
+                  display: block;
+                  margin: 0rem auto;
+            }
+
+            #weatherIcon {
+                  display: block;
+                  margin: 0rem auto;
+            }
+
+            .data-container {
+                  display: flex;
+            }
+
+            .data-main,
+            .data-sec {
+                  padding: 0rem 2rem;
+                  text-align: center;
+            }
+
+            hr {
+                  margin: 0.8rem 0rem;
+                  box-shadow: 1px 4px 6px black;
+            }
+
+            h1 {
+                  font-size: 0.8rem;
+                  font-weight: 800;
+            }
+
+            h2 {
+                  font-size: 0.6rem;
+            }
+
+            .data-sec hr {
+                  margin: 0.4rem 0rem;
+            }
+      </style>
+
+</head>
+
+<body>
+      <div class="app-wrapper">
+            <div class="input-box">
+                  <h1 class="heading">Weather App</h1>
+                  <form>
+                        <input class="textInput" type="text" id="search" placeholder="  Search correct location">
+
+                        <button class="btn" class="btn">Search</button>
+                  </form>
+            </div>
+
+            <div class="app-items">
+                  <div class="search-container">
+
+                        <!-- <hr> -->
+                        <div class="first-sec">
+                              <img id="weatherIcon" src="" alt="">
+                              <div class="Weather-desc">
+                              </div>
+
+
+                        </div>
+                  </div>
+                  <div class="dataDisplay">
+
+
+                  </div>
+
+
+            </div>
+      </div>
+
+
+
+
+      <!-- <script src="/app.js"></script> -->
+
+      <script>
+            // --API_KEY ---
+            const apiKey = "3cfef61111c549ece8c0c4eb0c2e149d";
+
+            // --Selectors --
+            const dataDisplay = document.querySelector(".dataDisplay");
+            const btn = document.querySelector(".btn");
+            const textInput = document.querySelector(".textInput");
+            const weatherIcon = document.querySelector("#weatherIcon");
+            const weatherDesc = document.querySelector(".Weather-desc");
+            const appItems = document.querySelector(".app-items");
+            const dataContain = document.querySelector(".dataContain");
+            const heading = document.querySelector(".heading");
+            appItems.style.display = "none";
+
+            // ------Diaplying Entered cordinates ----
+
+            btn.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  let location = textInput.value;
+                  textInput.value = " ";
+
+                  // --------Item-box display -logic --
+                  if (location.length <= 0) {
+                        alert("Please enter location to get weather report");
+                  }
+
+                  fetch(
+                        `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
+                  )
+                        .then((res) => res.json())
+                        .then((data) => {
+                              // ----Temperature conversion ---
+                              const { temp, temp_max } = data.main;
+                              let tempCel = temp - 273.15;
+                              let temp_maxCel = temp_max - 273.15;
+
+                              // ------Wind speed conversion --
+
+                              const { speed } = data.wind;
+                              let speedKmH = speed * 3.6;
+
+                              // ---Description to Upper case --
+
+                              let description = data.weather[0].description;
+                              description = description.toUpperCase();
+
+                              console.log(description);
+
+                              // --------Icons ------
+
+                              let icon = data.weather[0].icon;
+                              weatherIcon.setAttribute(
+                                    "src",
+                                    `http://openweathermap.org/img/wn/${icon}@4x.png`
+                              );
+                              // ---Weather Description insertion --
+                              weatherDesc.innerHTML = `            <div class="data-main">
+<h1>" ${description} "</h1>
+</div>`;
+
+                              // ------Displaying Data --
+
+                              dataDisplay.innerHTML = `<hr> 
+
+      <div class="data-container">
+            <div class="data-first">
+
+                  <div class="data-main">
+                        <h2> Place:</h2> <h1> ${location},  ${data.sys.country
+                                    }</h1>
+                  </div>
+                  <div class="data-main">
+                        <h2>Current Temp: </h2>
+                        <h1>${tempCel.toFixed(0)} °C </h1>
+                  </div>
+                  <div class="data-main">
+                        <h2>Max-Temp: </h2>
+                        <h1>  ${temp_maxCel.toFixed(0)} °C </h1>
+                  </div>
+            </div>
+            <div class="data-sec">
+
+                  <div class="data-sec">
+                        <h2>Wind Speed: </h2> <h1>${speedKmH.toFixed(2)}
+                        )} km/h </h1>
+                  </div>
+                  <div class="data-sec">
+                        <h2>Humidity: </h2> <h1> ${data.main.humidity}% </h1>
+                  </div>
+                  <div class="data-sec">
+                        <h2>Pressure: </h2> <h1> ${data.main.pressure} hPa </h1>
+                  </div>
+
+            </div>
+
+
+      </div>
+      <hr> 
+`;
+                              if ((data.main.mame = location)) {
+                                    appItems.style.display = "block";
+                                    console.log(123);
+                              } else {
+                              }
+
+                              console.log(data);
+                        });
+            });
+
+      </script>
+
+
+
+</body>
+
+</html>
