@@ -49,6 +49,14 @@ const webAppProjectList = [
 
   {
     id: 7,
+    img: "/app-banner/play-music.jpg",
+    title: "Tap the music",
+    code: "https://github.com/Ranjeet2311/Tap-the-Music",
+    demo: "/app-demo/play-music.html",
+  },
+
+  {
+    id: 8,
     img: "/app-banner/Menu-display.jpg",
     title: "Menu display -filter",
     code: "https://github.com/Ranjeet2311/Dynamic-Menu-Display",
@@ -56,19 +64,11 @@ const webAppProjectList = [
   },
 
   {
-    id: 8,
+    id: 9,
     img: "/app-banner/modal.jpg",
     title: "Best pictures from Europe",
     code: "https://github.com/Ranjeet2311/Modal",
     demo: "/app-demo/modal.html",
-  },
-
-  {
-    id: 9,
-    img: "/app-banner/play-music.jpg",
-    title: "Tap the music",
-    code: "https://github.com/Ranjeet2311/Tap-the-Music",
-    demo: "/app-demo/play-music.html",
   },
 ];
 const webTemplatesProjectList = [
