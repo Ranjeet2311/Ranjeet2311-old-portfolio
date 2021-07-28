@@ -6,6 +6,7 @@ const webAppProjectList = [
     code: "https://github.com/Ranjeet2311/To-Do-App-Vanilla-JS",
     demo: "/app-demo/todo.html",
   },
+
   {
     id: 2,
     img: "/app-banner/Weather.jpg",
@@ -13,6 +14,7 @@ const webAppProjectList = [
     code: "https://github.com/Ranjeet2311/Weather-App",
     demo: "/app-demo/weather.html",
   },
+
   {
     id: 3,
     img: "/app-banner/weight-converter.jpg",
@@ -20,40 +22,53 @@ const webAppProjectList = [
     code: "https://github.com/Ranjeet2311/Weight-Converter",
     demo: "/app-demo/weight-converter.html",
   },
+
   {
     id: 4,
-    img: "/app-banner/Digital-Clock.jpg",
-    title: " Digital clock",
-    code: "https://github.com/Ranjeet2311/Digital-Clock",
-    demo: "/app-demo/digital-clock.html",
-  },
-  {
-    id: 5,
-    img: "/app-banner/modal.jpg",
-    title: "Best pictures from Europe",
-    code: "https://github.com/Ranjeet2311/Modal",
-    demo: "/app-demo/modal.html",
-  },
-  {
-    id: 6,
-    img: "/app-banner/play-music.jpg",
-    title: "Tap the music",
-    code: "https://github.com/Ranjeet2311/Tap-the-Music",
-    demo: "/app-demo/play-music.html",
-  },
-  {
-    id: 7,
     img: "/app-banner/music-player.jpg",
     title: "Music player",
     code: "https://github.com/Ranjeet2311/Music-player",
     demo: "/app-demo/music-player.html",
   },
+
   {
-    id: 8,
+    id: 5,
     img: "/app-banner/counter.jpg",
     title: "Counter",
     code: "https://github.com/Ranjeet2311/Counter-",
     demo: "/app-demo/counter.html",
+  },
+
+  {
+    id: 6,
+    img: "/app-banner/Digital-Clock.jpg",
+    title: " Digital clock",
+    code: "https://github.com/Ranjeet2311/Digital-Clock",
+    demo: "/app-demo/digital-clock.html",
+  },
+
+  {
+    id: 7,
+    img: "/app-banner/Menu-display.jpg",
+    title: "Menu display -filter",
+    code: "https://github.com/Ranjeet2311/Dynamic-Menu-Display",
+    demo: "/app-demo/menu-display.html",
+  },
+
+  {
+    id: 8,
+    img: "/app-banner/modal.jpg",
+    title: "Best pictures from Europe",
+    code: "https://github.com/Ranjeet2311/Modal",
+    demo: "/app-demo/modal.html",
+  },
+
+  {
+    id: 9,
+    img: "/app-banner/play-music.jpg",
+    title: "Tap the music",
+    code: "https://github.com/Ranjeet2311/Tap-the-Music",
+    demo: "/app-demo/play-music.html",
   },
 ];
 const webTemplatesProjectList = [
