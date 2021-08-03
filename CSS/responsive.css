@@ -83,7 +83,8 @@
 
   /* ----------Project -------------- */
   .web-app-project-links,
-  .web-template-project-links {
+  .web-template-project-links,
+  .react-app-project-links {
     display: flex;
     justify-content: center;
     align-items: center;
