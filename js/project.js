@@ -163,7 +163,7 @@ let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
         <img src= ${item.img} >
         <h4>${item.title}</h4>
         <div class="links-container-btn">
-              <button class="btn-links btn"> <a href=${item.code}> <i class="fas fa-download"></i> source code
+              <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
                     </a></button>
               <button class="btn-links btn"> <a
                           href=${item.demo}
@@ -190,13 +190,20 @@ const reactProjectList = [
   },
   {
     id: 2,
+    img: "/reactScreenshots/quiz-demo.jpg",
+    title: "Quiz App",
+    code: "https://github.com/Ranjeet2311/React-Quiz-App",
+    demo: "https://quiz-app-0810.netlify.app/",
+  },
+  {
+    id: 3,
     img: "/reactScreenshots/React-home.png",
     title: "React-Website",
     code: "https://github.com/Ranjeet2311/React-Website",
     demo: "https://react-website-0803.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     img: "/reactScreenshots/react-menu-home.png",
     title: "React Dynamic Menu",
     code: "https://github.com/Ranjeet2311/React-Navbar",
@@ -209,7 +216,7 @@ let reactProjectDisplay = reactProjectList.map(function (item) {
   <img src= ${item.img} >
   <h4>${item.title}</h4>
   <div class="links-container-btn">
-        <button class="btn-links btn"> <a href=${item.code}> <i class="fas fa-download"></i> source code
+        <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
               </a></button>
         <button class="btn-links btn"> <a
                     href=${item.demo}
