@@ -6,6 +6,7 @@ const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
 // const blink = document.querySelector(".blink");
 const faDotCircle = document.querySelector(".fa-dot-circle");
+const background = document.querySelector(".background");
 // let webAppProjectLinks = document.querySelector(".web-app-project-links");
 
 setInterval(() => {
@@ -18,12 +19,20 @@ burger.addEventListener("click", () => {
   // Git.classList.toggle("V-opacity");
 });
 
-avatarContainer.addEventListener("mouseover", () => {
+background.addEventListener("mouseover", () => {
   avatarHi.classList.remove("Avtar_Hide");
   avatarNamaste.classList.add("Avtar_Hide");
 });
+// avatarContainer.addEventListener("mouseover", () => {
+//   avatarHi.classList.remove("Avtar_Hide");
+//   avatarNamaste.classList.add("Avtar_Hide");
+// });
 
-avatarContainer.addEventListener("mouseout", () => {
+background.addEventListener("mouseout", () => {
   avatarHi.classList.add("Avtar_Hide");
   avatarNamaste.classList.remove("Avtar_Hide");
 });
+// avatarContainer.addEventListener("mouseout", () => {
+//   avatarHi.classList.add("Avtar_Hide");
+//   avatarNamaste.classList.remove("Avtar_Hide");
+// });
