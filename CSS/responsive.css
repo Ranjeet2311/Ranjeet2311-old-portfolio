@@ -103,11 +103,16 @@
 }
 
 /* ---------- */
+@media screen and (max-width: 580px) {
+  .background {
+    height: 120vh;
+  }
+}
 /* --Home--- */
 
 @media screen and (max-width: 460px) {
   .background {
-    height: 100vh;
+    height: 80vh;
   }
   .background .caption p {
     display: none;
