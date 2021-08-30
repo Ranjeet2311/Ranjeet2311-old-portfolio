@@ -171,6 +171,14 @@
   z-index: 1;
   border: 0.6px solid silver;
 }
+
+/* ----Clock---- */
+.clock-item-container {
+  color: white;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px black;
+}
+
 /* ------------------------------------------ */
 /* -------------------Page Starts----- */
 
@@ -201,7 +209,16 @@
 }
 
 /* -------Hero Avatar -------- */
-.caption .Avatar-Home {
+
+.caption {
+  width: 40%;
+  margin: 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Avatar-Home {
   width: 40%;
   margin: 8px 0px;
   display: flex;
@@ -250,6 +267,7 @@
   text-align: center;
   text-shadow: 2px 2px 2px black;
 }
+
 hr {
   width: 80%;
   background-color: white;
