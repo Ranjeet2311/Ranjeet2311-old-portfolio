@@ -280,10 +280,10 @@
   text-shadow: 2px 2px 2px black;
 }
 
-hr {
+.background .caption hr {
   width: 100%;
   background-color: white;
-  box-shadow: 4px 4px 5px black;
+  box-shadow: 4px 4px 8px black;
   padding: 0.5px;
 }
 
@@ -511,6 +511,12 @@ hr {
   box-shadow: 15px 15px 55px black;
   z-index: 1;
 }
+.scroll-wrapper hr {
+  width: 40%;
+  background-color: white;
+  box-shadow: 4px 4px 8px black;
+  padding: 0.5px;
+}
 .scroll-wrapper h1 {
   font-size: 2rem;
   font-weight: 900;
@@ -571,6 +577,14 @@ hr {
   align-items: center;
   flex-direction: column;
 }
+
+.web-app-project-wraper hr {
+  width: 40%;
+  background-color: white;
+  box-shadow: 4px 4px 8px black;
+  padding: 0.5px;
+}
+
 .web-app-project-wraper header {
   font-size: 4rem;
   margin-top: 3rem;
