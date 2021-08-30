@@ -20,10 +20,15 @@ burger.addEventListener("click", () => {
   // Git.classList.toggle("V-opacity");
 });
 
+// -------Delay time ---
+let delayInMilliseconds = 1000;
+
 background.addEventListener("mouseover", () => {
-  avatarHi.classList.remove("Avtar_Hide");
-  avatarNamaste.classList.add("Avtar_Hide");
-  // background.style.opacity = "10";
+  setTimeout(function () {
+    avatarHi.classList.remove("Avtar_Hide");
+    avatarNamaste.classList.add("Avtar_Hide");
+    // background.style.opacity = "10";
+  }, delayInMilliseconds);
 });
 // avatarContainer.addEventListener("mouseover", () => {
 //   avatarHi.classList.remove("Avtar_Hide");
@@ -31,8 +36,10 @@ background.addEventListener("mouseover", () => {
 // });
 
 background.addEventListener("mouseout", () => {
-  avatarHi.classList.add("Avtar_Hide");
-  avatarNamaste.classList.remove("Avtar_Hide");
+  setTimeout(function () {
+    avatarHi.classList.add("Avtar_Hide");
+    avatarNamaste.classList.remove("Avtar_Hide");
+  }, delayInMilliseconds);
 });
 // avatarContainer.addEventListener("mouseout", () => {
 //   avatarHi.classList.add("Avtar_Hide");
