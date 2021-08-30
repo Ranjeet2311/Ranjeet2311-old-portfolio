@@ -80,17 +80,8 @@
   font-weight: 500;
   text-shadow: none;
 }
-/* li .fas {
-  text-decoration: none;
-  font-size: 1.5rem;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  text-shadow: 2px 2px 8px rgb(30, 103, 238);
-} */
+
 .blink {
-  /* text-shadow: 2px 2px 8px rgb(30, 103, 238); */
-  /* text-shadow: 2px 2px 8px white; */
-  /* color: rgb(30, 103, 238); */
   color: red;
   font-size: 1.5rem;
 }
@@ -316,15 +307,14 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: -webkit-linear-gradient(to top, #6495ed, #ffffff);
-  background: linear-gradient(to top, #6495ed, #ffffff);
+  background: -webkit-linear-gradient(to top, #085dfa, #ffffff);
+  background: linear-gradient(to top, #085dfa, #ffffff);
 }
 
 .background .caption .download:hover {
-  background: -webkit-linear-gradient(to right, #ffffff, #6495ed);
-  background: linear-gradient(to right, #ffffff, #6495ed);
-  -webkit-transition: all 10s ease;
-  transition: all 10s ease;
+  background: -webkit-linear-gradient(to right, #ffffff, #085dfa);
+  background: linear-gradient(to right, #ffffff, #085dfa);
+  /* transition: all 10s ease; */
 }
 
 .background .caption .download a {
