@@ -114,6 +114,13 @@ const webTemplatesProjectList = [
     code: "https://github.com/Ranjeet2311/Ranjeet2311.github.io",
     demo: "https://ranjeet2311.github.io/",
   },
+  {
+    id: 7,
+    img: "/app-banner/Animated-Boat.jpg",
+    title: "Animated Boat",
+    code: "https://github.com/Ranjeet2311/Boat-Animation",
+    demo: "/app-demo/animatedBoat.html",
+  },
 ];
 
 const nav = document.querySelector(".nav-menu");
@@ -197,13 +204,20 @@ const reactProjectList = [
   },
   {
     id: 3,
+    img: "/app-banner/Text-to-speech-image.jpg",
+    title: "Text to Speech",
+    code: "https://github.com/Ranjeet2311/React-Speech-to-text",
+    demo: "https://speech-to-text-09-01.netlify.app",
+  },
+  {
+    id: 4,
     img: "/reactScreenshots/React-home.png",
     title: "React-Website",
     code: "https://github.com/Ranjeet2311/React-Website",
     demo: "https://react-website-0803.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     img: "/reactScreenshots/react-menu-home.png",
     title: "React Dynamic Menu",
     code: "https://github.com/Ranjeet2311/React-Navbar",

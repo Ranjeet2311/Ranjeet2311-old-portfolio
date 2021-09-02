@@ -64,6 +64,7 @@ window.addEventListener("load", () => {
   }
 
   setInterval(() => {
-    typeWriter();
+    setTimeout(typeWriter, speed);
+    // typeWriter();
   }, 1500);
 });

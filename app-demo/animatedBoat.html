@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Animation</title>
+      <link rel="icon" type="image/png" href="../Img/Avatar.jpg" />
+
+      <style>
+            * {
+                  margin: 0;
+                  padding: 0;
+            }
+
+            .main {
+                  width: 100%;
+                  height: 100vh;
+                  position: relative;
+                  background-image: url(./img-Animated-Boat/nature-3616194_1920.jpg);
+                  /* background-image: url(img/background.jpg); */
+                  background-size: cover;
+                  background-position: center;
+                  overflow: hidden;
+            }
+
+            .ocean {
+                  height: 200px;
+                  position: absolute;
+                  width: 100%;
+                  bottom: 0;
+                  left: 0;
+            }
+
+            .ocean img {
+                  height: 100%;
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  animation: water 30s ease-in-out infinite;
+            }
+
+            .boat {
+                  position: absolute;
+                  bottom: 80px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  animation: boat 3s linear infinite;
+                  border: 1px solid black;
+            }
+
+            .boat img {
+                  /* width: 100%; */
+                  width: 20rem;
+                  height: 22rem;
+                  -webkit-box-reflect: below 0 linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6));
+                  animation: boat 8s ease-in infinite;
+            }
+
+            .cloud {
+                  position: absolute;
+                  right: 0;
+                  /* top: 5px; */
+                  height: 298px;
+                  animation: cloud 100s linear infinite;
+            }
+
+            @keyframes cloud {
+                  0% {
+                        transform: translate(0vw);
+                  }
+
+                  100% {
+                        transform: translateX(700px);
+                  }
+            }
+
+            @keyframes water {
+                  0% {
+                        transform: translate(0);
+                  }
+
+                  50% {
+                        transform: translate(500px);
+                  }
+
+                  100% {
+                        transform: translate(1000px);
+                  }
+            }
+
+            @keyframes boat {
+                  0% {
+                        transform: rotate(0deg);
+                  }
+
+                  25% {
+                        transform: rotate(1deg);
+                  }
+
+                  50% {
+                        transform: rotate(0deg);
+                  }
+
+                  75% {
+                        transform: rotate(-1deg);
+                  }
+            }
+      </style>
+
+
+
+</head>
+
+
+<body>
+      <div class="main">
+            <img class="cloud" src="./img-Animated-Boat/cloud.png" alt="cloud">
+            <div class="ocean">
+                  <img src="./img-Animated-Boat/water.png" alt="water">
+                  <div class="boat">
+                        <!-- <img src="./img/ship-1359572_1920.png"> -->
+                        <img src="./img-Animated-Boat/boat.png">
+                  </div>
+            </div>
+
+      </div>
+
+</body>
+
+</html>
