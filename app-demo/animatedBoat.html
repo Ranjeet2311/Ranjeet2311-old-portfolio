@@ -127,6 +127,27 @@
 
       </div>
 
+      <script>
+
+
+            window.addEventListener("load", () => {
+                  // setInterval(AudPlay, 3000);
+                  AudPlay()
+
+
+            });
+
+            function AudPlay() {
+                  let audio = new Audio('animated-Boat.mp3');
+                  audio.volume = 0.1;
+                  // audio.loop = true;
+                  audio.play();
+                  // audio.load();
+
+            }
+
+      </script>
+
 </body>
 
 </html>
