@@ -48,23 +48,22 @@ background.addEventListener("mouseout", () => {
 
 // -----Greeting - Typewriting effect ----
 
+setInterval(() => {}, 3000);
+
 const typedText = document.querySelector(".typedText");
 
 window.addEventListener("load", () => {
   let i = 0;
   let txt = "I'm Ranjeet";
-  let speed = 300;
 
   function typeWriter() {
     if (i < txt.length) {
       typedText.innerHTML += txt.charAt(i);
       i++;
-      setTimeout(typeWriter, speed);
     }
   }
 
   setInterval(() => {
-    setTimeout(typeWriter, speed);
-    // typeWriter();
-  }, 1500);
+    typeWriter();
+  }, 600);
 });
