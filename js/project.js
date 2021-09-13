@@ -121,6 +121,13 @@ const webTemplatesProjectList = [
     code: "https://github.com/Ranjeet2311/Boat-Animation",
     demo: "/app-demo/animatedBoat.html",
   },
+  {
+    id: 8,
+    img: "/app-banner/Av-st-Template-demo.PNG",
+    title: "Av-st-Template",
+    code: "https://github.com/Ranjeet2311/frontend-_AV",
+    demo: "https://av-st-template.netlify.app/",
+  },
 ];
 
 const nav = document.querySelector(".nav-menu");
