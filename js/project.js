@@ -391,7 +391,7 @@ window.addEventListener("load", () => {
 //   console.log(123);
 // });
 
-gsap.from(".logo", { duration: 3, x: 1000, opacity: 0, ease: "back" });
+gsap.from(".logo", { duration: 3, x: -1000, opacity: 0, ease: "back" });
 gsap.from(".scroll-links", { duration: 3, x: -1000 });
-gsap.from(".navigation", { duration: 3.5, y: -1000 });
+gsap.from(".navigation", { duration: 3.5, x: 1000 });
 gsap.from(".up-icon", { duration: 2, y: -1000 });

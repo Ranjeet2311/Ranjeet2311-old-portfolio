@@ -19,15 +19,23 @@ let delayInMilliseconds = 1000;
 
 body.addEventListener("mouseover", () => {
   setTimeout(function () {
-    avatarHi.classList.remove("Avtar_Hide");
-    avatarNamaste.classList.add("Avtar_Hide");
+    if (avatarHi) {
+      avatarHi.classList.remove("Avtar_Hide");
+    }
+    if (avatarNamaste) {
+      avatarNamaste.classList.add("Avtar_Hide");
+    }
   }, delayInMilliseconds);
 });
 
 body.addEventListener("mouseout", () => {
   setTimeout(function () {
-    avatarHi.classList.add("Avtar_Hide");
-    avatarNamaste.classList.remove("Avtar_Hide");
+    if (avatarHi) {
+      avatarHi.classList.add("Avtar_Hide");
+    }
+    if (avatarNamaste) {
+      avatarNamaste.classList.remove("Avtar_Hide");
+    }
   }, delayInMilliseconds);
 });
 
@@ -35,18 +43,20 @@ body.addEventListener("mouseout", () => {
 
 setInterval(() => {}, 3000);
 
-const typedText = document.querySelector(".typedText");
-
 window.addEventListener("DOMContentLoaded", () => {
   let i = 0;
   let txt = "I'm Ranjeet";
 
   function typeWriter() {
-    if (i < txt.length) {
-      typedText.innerHTML += txt.charAt(i);
-      i++;
+    var typedText = document.querySelector(".typedText");
+
+    if (typedText) {
+      if (i < txt.length) {
+        typedText.innerHTML += txt.charAt(i);
+        i++;
+      }
     }
-    console.log("typing works");
+    // console.log("typing works");
   }
 
   setInterval(() => {
@@ -54,11 +64,18 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 600);
 });
 
-gsap.from(".logo", { duration: 3, x: 1000, opacity: 0, ease: "back" });
+gsap.config({
+  nullTargetWarn: false,
+  trialWarn: false,
+});
+
+gsap.set(".null", { opacity: 1 });
+
+gsap.from(".logo", { duration: 3, x: -1000, opacity: 0, ease: "back" });
 gsap.from(".caption-text", { duration: 1.5, x: -1000 });
 gsap.from(".Avatar-Home", { duration: 2, y: 1000 });
 // --about page--
-gsap.from(".about-title", { duration: 2, y: -1000 });
+gsap.from(".about-title", { duration: 2, x: 1000 });
 gsap.from(".caption-about", { duration: 2, x: -1000 });
 gsap.from(".image-about", { duration: 2, x: 1000 });
 gsap.from(".about-para", { duration: 2, y: 1000 });

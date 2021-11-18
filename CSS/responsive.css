@@ -17,7 +17,12 @@
     text-align: center;
   }
   .nav ul li {
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin: 0rem auto;
+  }
+  .nav ul li {
+    width: 80%;
   }
 
   .nav .Git {
