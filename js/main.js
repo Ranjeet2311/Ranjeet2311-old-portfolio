@@ -1,10 +1,8 @@
 const nav = document.querySelector(".nav-menu");
 const burger = document.querySelector(".burger");
-const avatarContainer = document.querySelector(".Avatar-Home");
 const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
 const faDotCircle = document.querySelector(".fa-dot-circle");
-const background = document.querySelector(".background");
 const body = document.querySelector("body");
 
 setInterval(() => {
@@ -55,3 +53,16 @@ window.addEventListener("DOMContentLoaded", () => {
     typeWriter();
   }, 600);
 });
+
+gsap.from(".logo", { duration: 3, x: 1000, opacity: 0, ease: "back" });
+gsap.from(".caption-text", { duration: 1.5, x: -1000 });
+gsap.from(".Avatar-Home", { duration: 2, y: 1000 });
+// --about page--
+gsap.from(".about-title", { duration: 2, y: -1000 });
+gsap.from(".caption-about", { duration: 2, x: -1000 });
+gsap.from(".image-about", { duration: 2, x: 1000 });
+gsap.from(".about-para", { duration: 2, y: 1000 });
+// --Skills page--
+gsap.from(".skills-hd1, .main-skills", { duration: 2, x: 1000 });
+gsap.from(".skills-hd2", { duration: 2, x: -1000 });
+gsap.from(".other-skills, learn-skills", { duration: 2.5, x: -1000 });
