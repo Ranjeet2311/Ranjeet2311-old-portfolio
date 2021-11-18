@@ -152,8 +152,9 @@ burger.addEventListener("click", () => {
 
 // ---------Web App Project mapping ---
 
-let projectDisplay = webAppProjectList.map(function (item) {
-  return `                  <div class="links-container">
+window.addEventListener("load", () => {
+  let projectDisplay = webAppProjectList.map(function (item) {
+    return `   <div class="links-container">
         <img src= ${item.img} >
         <h4>${item.title}</h4>
         <div class="links-container-btn">
@@ -166,14 +167,14 @@ let projectDisplay = webAppProjectList.map(function (item) {
               </button>
         </div>
     
-      </div> `;
-});
-projectDisplay = projectDisplay.join("");
-webAppProjectLinks.innerHTML = projectDisplay;
+      </div>  `;
+  });
+  projectDisplay = projectDisplay.join("");
+  webAppProjectLinks.innerHTML = projectDisplay;
 
-// ---------Web Template Project mapping ------
-let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
-  return `                  <div class="links-container">
+  // ---------Web Template Project mapping ------
+  let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
+    return `                  <div class="links-container">
         <img src= ${item.img} >
         <h4>${item.title}</h4>
         <div class="links-container-btn">
@@ -187,53 +188,53 @@ let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
         </div>
     
       </div> `;
-});
-webTemplateProjectDisplay = webTemplateProjectDisplay.join("");
-webTemplateProjectLinks.innerHTML = webTemplateProjectDisplay;
+  });
+  webTemplateProjectDisplay = webTemplateProjectDisplay.join("");
+  webTemplateProjectLinks.innerHTML = webTemplateProjectDisplay;
 
-// console.log(webTemplateProjectDisplay);
+  // console.log(webTemplateProjectDisplay);
 
-// -----------------React project Display---------------
-const reactProjectList = [
-  {
-    id: 1,
-    img: "/reactScreenshots/movie-database-project.png",
-    title: "Movie Database",
-    code: "https://github.com/Ranjeet2311/React-MovieDatabase-app",
-    demo: "https://movie-database-project-0802.netlify.app/",
-  },
-  {
-    id: 2,
-    img: "/reactScreenshots/quiz-demo.jpg",
-    title: "Quiz App",
-    code: "https://github.com/Ranjeet2311/React-Quiz-App",
-    demo: "https://quiz-app-0810.netlify.app/",
-  },
-  {
-    id: 3,
-    img: "/app-banner/Text-to-speech-image.jpg",
-    title: "Text to Speech",
-    code: "https://github.com/Ranjeet2311/React-Speech-to-text",
-    demo: "https://speech-to-text-09-01.netlify.app",
-  },
-  {
-    id: 4,
-    img: "/reactScreenshots/React-home.png",
-    title: "React-Website",
-    code: "https://github.com/Ranjeet2311/React-Website",
-    demo: "https://react-website-0803.netlify.app/",
-  },
-  {
-    id: 5,
-    img: "/reactScreenshots/react-menu-home.png",
-    title: "React Dynamic Menu",
-    code: "https://github.com/Ranjeet2311/React-Navbar",
-    demo: "https://react-navigation-menu-0803.netlify.app/",
-  },
-];
+  // -----------------React project Display---------------
+  const reactProjectList = [
+    {
+      id: 1,
+      img: "/reactScreenshots/movie-database-project.png",
+      title: "Movie Database",
+      code: "https://github.com/Ranjeet2311/React-MovieDatabase-app",
+      demo: "https://movie-database-project-0802.netlify.app/",
+    },
+    {
+      id: 2,
+      img: "/reactScreenshots/quiz-demo.jpg",
+      title: "Quiz App",
+      code: "https://github.com/Ranjeet2311/React-Quiz-App",
+      demo: "https://quiz-app-0810.netlify.app/",
+    },
+    {
+      id: 3,
+      img: "/app-banner/Text-to-speech-image.jpg",
+      title: "Text to Speech",
+      code: "https://github.com/Ranjeet2311/React-Speech-to-text",
+      demo: "https://speech-to-text-09-01.netlify.app",
+    },
+    {
+      id: 4,
+      img: "/reactScreenshots/React-home.png",
+      title: "React-Website",
+      code: "https://github.com/Ranjeet2311/React-Website",
+      demo: "https://react-website-0803.netlify.app/",
+    },
+    {
+      id: 5,
+      img: "/reactScreenshots/react-menu-home.png",
+      title: "React Dynamic Menu",
+      code: "https://github.com/Ranjeet2311/React-Navbar",
+      demo: "https://react-navigation-menu-0803.netlify.app/",
+    },
+  ];
 
-let reactProjectDisplay = reactProjectList.map(function (item) {
-  return `<div class="links-container">
+  let reactProjectDisplay = reactProjectList.map(function (item) {
+    return `<div class="links-container">
   <img src= ${item.img} >
   <h4>${item.title}</h4>
   <div class="links-container-btn">
@@ -247,9 +248,10 @@ let reactProjectDisplay = reactProjectList.map(function (item) {
   </div>
 
 </div>`;
+  });
+  reactProjectDisplay = reactProjectDisplay.join(" ");
+  reactAppProjectLinks.innerHTML = reactProjectDisplay;
 });
-reactProjectDisplay = reactProjectDisplay.join(" ");
-reactAppProjectLinks.innerHTML = reactProjectDisplay;
 
 // let reactAppProjectLinks = reactProjectList.map(function (item) {
 //   return `                  <div class="links-container">
@@ -264,7 +266,6 @@ reactAppProjectLinks.innerHTML = reactProjectDisplay;
 //                           Demo</a>
 //               </button>
 //         </div>
-
 //       </div> `;
 // });
 // reactAppProjectLinks = reactAppProjectLinks.join("");

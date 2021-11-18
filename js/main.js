@@ -7,7 +7,6 @@ const avatarNamaste = document.querySelector(".Avatar-Namaste");
 // const blink = document.querySelector(".blink");
 const faDotCircle = document.querySelector(".fa-dot-circle");
 const background = document.querySelector(".background");
-// let webAppProjectLinks = document.querySelector(".web-app-project-links");
 
 setInterval(() => {
   faDotCircle.classList.toggle("blink");
@@ -52,7 +51,7 @@ setInterval(() => {}, 3000);
 
 const typedText = document.querySelector(".typedText");
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   let i = 0;
   let txt = "I'm Ranjeet";
 
@@ -61,6 +60,7 @@ window.addEventListener("load", () => {
       typedText.innerHTML += txt.charAt(i);
       i++;
     }
+    console.log("typing works");
   }
 
   setInterval(() => {

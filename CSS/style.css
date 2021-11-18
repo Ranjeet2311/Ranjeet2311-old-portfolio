@@ -22,6 +22,7 @@
   align-items: center;
   /* z-index: 1; */
   width: 100%;
+  background-color: rgb(30, 103, 238);
 }
 
 .logo {
@@ -56,13 +57,17 @@
 
 .nav ul li {
   list-style: none;
-  padding: 8px 20px;
+  margin: 8px 20px;
+  padding: 1px 10px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .nav ul li:hover {
-  background: cornflowerblue;
+  border-bottom: 1px solid white;
+  /* box-shadow: 0px 0px 2px white; */
+
+  /* background: cornflowerblue; */
 }
 
 .nav ul li a {
@@ -224,7 +229,7 @@
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 10px 10px 10px black;
-  background-color: rgb(100, 149, 237);
+  background-color: rgb(30, 103, 238);
 }
 
 .Avtar_Hide {
@@ -307,13 +312,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: -webkit-linear-gradient(to top, #085dfa, #ffffff);
-  background: linear-gradient(to top, #085dfa, #ffffff);
+  background: -webkit-linear-gradient(to top, rgb(30, 103, 238), #ffffff);
+  background: linear-gradient(to top, rgb(30, 103, 238), #ffffff);
 }
 
+/* background-color: rgb(30, 103, 238); */
+
 .background .caption .download:hover {
-  background: -webkit-linear-gradient(to right, #ffffff, #085dfa);
-  background: linear-gradient(to right, #ffffff, #085dfa);
+  background: -webkit-linear-gradient(to right, #ffffff, rgb(30, 103, 238));
+  background: linear-gradient(to right, #ffffff, rgb(30, 103, 238));
   /* transition: all 10s ease; */
 }
 
@@ -340,6 +347,9 @@
 
 /* ---------------------------------------------- */
 /* _______________About Me starts _________ */
+.about-title {
+  text-align: center;
+}
 
 .contain {
   margin: 40px 0px;
@@ -593,6 +603,8 @@
   font-weight: 900;
 }
 
+/* ---------swiper ------------- */
+
 .web-app-project-links,
 .web-template-project-links,
 .react-app-project-links {
@@ -607,7 +619,8 @@
   /* display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; */
+  flex-direction: column;
+  flex-wrap: wrap; */
 }
 
 /* .web-app-project-links .links-container { */
@@ -814,11 +827,3 @@ h1 {
 .bottom-hr {
   margin: 1rem auto;
 }
-
-/* -------Responsive ---- */
-/* 
-@media only screen and (max-width: 700px) {
-  .react-image-slider {
-    flex-direction: column;
-  }
-} */
