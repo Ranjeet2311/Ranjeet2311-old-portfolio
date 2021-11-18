@@ -22,7 +22,7 @@
   align-items: center;
   /* z-index: 1; */
   width: 100%;
-  /* background-color: rgb(30, 103, 238); */
+  background-color: rgb(30, 103, 238, 0.5);
 }
 
 .logo {
@@ -318,7 +318,8 @@
 .background .caption .download:hover {
   background: -webkit-linear-gradient(to right, #ffffff);
   background: linear-gradient(to right, #ffffff, rgb(30, 103, 238));
-  /* transition: all 10s ease; */
+  transform: scale(1.2);
+  transition: all 0.2s ease-out;
 }
 
 .background .caption .download a {
@@ -552,6 +553,7 @@
 .scroll-btns:hover {
   box-shadow: 8px 8px 20px rgb(56, 55, 55);
   background-color: rgb(30, 103, 238);
+  transform: scale(1.1);
   transition: all 0.2s ease-out;
 }
 /* .scroll-wrapper .scroll-links a { */
