@@ -584,14 +584,15 @@
 
 /* -------Projects container */
 
-.web-app-project-wraper {
+/* .web-app-project-wraper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
 .web-app-project-wraper hr {
+  margin: 1rem auto;
   width: 40%;
   background-color: white;
   box-shadow: 4px 4px 8px black;
@@ -599,10 +600,17 @@
 }
 
 .web-app-project-wraper header {
-  font-size: 4rem;
+  text-align: center;
+  font-size: 2rem;
   margin-top: 3rem;
   font-variant-caps: small-caps;
-  font-size: 2rem;
+  font-weight: 900;
+}
+.web-app-project-wraper .bottom-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 3rem;
+  font-variant-caps: small-caps;
   font-weight: 900;
 }
 
@@ -662,14 +670,14 @@
 }
 /* .web-app-project-links .links-container img:hover { */
 .links-container img:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   cursor: pointer;
 }
 /* .web-template-project-links .links-container img:hover { */
-.links-container img:hover {
-  transform: scale(1.5);
+/* .links-container img:hover {
+  transform: scale(1.2);
   cursor: pointer;
-}
+} */
 /* .web-app-project-links .links-container .links-container-btn { */
 .links-container-btn {
   display: flex;
@@ -830,28 +838,187 @@ h1 {
 }
 
 /* -------transition ---- */
-.transition-fade {
-  opacity: 1;
-  transition: 0.3s;
-  transform: translateX(0);
-  transform-origin: left;
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: grab;
 }
 
-html.is-animating .transition-fade {
-  opacity: 1;
-  transform: translateX(-100%);
+.main-content {
+  position: relative;
+}
+.main-content .owl-theme .custom-nav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.main-content .owl-theme .custom-nav .owl-prev {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
 }
 
-html.is-leaving .transition-fade {
+.main-content .owl-theme .custom-nav .owl-next {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
+}
+
+.main-content .owl-theme .custom-nav .owl-prev:hover {
+  width: 4rem;
+  transition: all 0.2s ease-out;
+}
+.main-content .owl-theme .custom-nav .owl-next:hover {
+  width: 4rem;
+  transition: all 0.2s ease-out;
+}
+.main-content .owl-theme .custom-nav .owl-prev span {
   opacity: 0;
-  transform: translateX(0);
 }
 
-/* .transition-swipe {
-  transition: 0.5s;
-  transform: translateY(0);
+.main-content .owl-theme .custom-nav .owl-next span {
+  opacity: 0;
 }
 
-html.is-animating .transition-swipe {
-  transform: translateY(100px);
-} */
+.main-content .owl-theme .custom-nav .owl-prev {
+  left: 0;
+  /* background-color: rgb(30, 103, 238, 0.5); */
+}
+.main-content .owl-theme .custom-nav .owl-next {
+  right: 0;
+  /* background-color: rgb(30, 103, 238, 0.5); */
+}
+
+/* ---2nd slide------------- */
+
+.main-content .owl-theme .custom-nav1 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.main-content .owl-theme .custom-nav1 .owl-prev {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
+}
+.main-content .owl-theme .custom-nav1 .owl-next {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
+}
+
+.main-content .owl-theme .custom-nav1 .owl-prev span {
+  opacity: 0;
+}
+.main-content .owl-theme .custom-nav1 .owl-next span {
+  opacity: 0;
+}
+
+.main-content .owl-theme .custom-nav1 .owl-prev {
+  left: 0;
+  /* background-color: transparent; */
+}
+.main-content .owl-theme .custom-nav1 .owl-next {
+  right: 0;
+  /* background-color: transparent; */
+}
+
+/* ---3rd slide------------- */
+
+.main-content .owl-theme .custom-nav2 {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.main-content .owl-theme .custom-nav2 .owl-prev {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
+}
+.main-content .owl-theme .custom-nav2 .owl-next {
+  position: absolute;
+  border: none;
+  z-index: 100;
+  width: 3rem;
+  height: 50vh;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  background-image: url(../Img/angle-circle-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  filter: invert(100);
+  background-color: rgb(114 81 9 / 94%);
+}
+.main-content .owl-theme .custom-nav2 .owl-prev span {
+  opacity: 0;
+}
+.main-content .owl-theme .custom-nav2 .owl-next span {
+  opacity: 0;
+}
+
+.main-content .owl-theme .custom-nav2 .owl-prev {
+  left: 0;
+  /* background-color: transparent; */
+}
+.main-content .owl-theme .custom-nav2 .owl-next {
+  right: 0;
+  /* background-color: transparent; */
+}
