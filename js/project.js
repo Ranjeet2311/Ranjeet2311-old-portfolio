@@ -400,7 +400,7 @@ gsap.from(".up-icon", { duration: 2, y: -1000 });
 
 $(".main-content .owl-one").owlCarousel({
   stagePadding: 50,
-  loop: false,
+  loop: true,
   margin: 10,
   nav: true,
 
@@ -431,7 +431,7 @@ $(".main-content .owl-one").owlCarousel({
 
 $(".main-content .owl-two").owlCarousel({
   stagePadding: 50,
-  loop: false,
+  loop: true,
   margin: 10,
   nav: true,
   // navText: [
@@ -464,7 +464,7 @@ $(".main-content .owl-two").owlCarousel({
 });
 $(".main-content .owl-three").owlCarousel({
   stagePadding: 50,
-  loop: false,
+  loop: true,
   margin: 10,
   nav: true,
   // navText: [
@@ -495,3 +495,5 @@ $(".main-content .owl-three").owlCarousel({
     },
   },
 });
+
+// .custom-nav .owl-next

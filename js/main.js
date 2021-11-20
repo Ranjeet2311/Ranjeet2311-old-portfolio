@@ -45,7 +45,7 @@ setInterval(() => {}, 3000);
 
 window.addEventListener("DOMContentLoaded", () => {
   let i = 0;
-  let txt = "I'm Ranjeet";
+  let txt = "Welcome! I'm Ranjeet";
 
   function typeWriter() {
     var typedText = document.querySelector(".typedText");
