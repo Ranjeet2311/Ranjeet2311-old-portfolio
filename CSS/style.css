@@ -900,6 +900,7 @@ h1 {
   cursor: pointer;
   background: rgb(30, 103, 238, 0.3);
   font-size: 1.3rem;
+}
 
 .main-content .owl-theme .custom-nav1 .owl-prev:hover,
 .main-content .owl-theme .custom-nav1 .owl-next:hover {
