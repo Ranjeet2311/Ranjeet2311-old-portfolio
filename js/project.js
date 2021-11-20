@@ -398,107 +398,107 @@ gsap.from(".scroll-links", { duration: 3, x: -1000 });
 gsap.from(".navigation", { duration: 3.5, x: 1000 });
 gsap.from(".up-icon", { duration: 2, y: -1000 });
 
-// if (typeof owlCarousel === "function") {
-$(".main-content .owl-one").owlCarousel({
-  stagePadding: 50,
-  loop: false,
-  margin: 10,
-  nav: true,
+if (typeof owlCarousel === "function") {
+  $(".main-content .owl-one").owlCarousel({
+    stagePadding: 50,
+    loop: false,
+    margin: 10,
+    nav: true,
 
-  navContainer: ".main-content .custom-nav",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+    navContainer: ".main-content .custom-nav",
+    responsive: {
+      0: {
+        items: 1,
+      },
+      370: {
+        items: 1,
+      },
 
-    870: {
-      items: 2,
-    },
+      870: {
+        items: 2,
+      },
 
-    1270: {
-      items: 3,
+      1270: {
+        items: 3,
+      },
+      1570: {
+        items: 4,
+      },
+      1870: {
+        items: 5,
+      },
     },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
-// }
+  });
+}
 
-// if (typeof owlCarousel === "function") {
-$(".main-content .owl-two").owlCarousel({
-  stagePadding: 50,
-  loop: false,
-  margin: 10,
-  nav: true,
-  // navText: [
-  //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-  //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-  // ],
-  navContainer: ".main-content .custom-nav1",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+if (typeof owlCarousel === "function") {
+  $(".main-content .owl-two").owlCarousel({
+    stagePadding: 50,
+    loop: false,
+    margin: 10,
+    nav: true,
+    // navText: [
+    //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+    //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+    // ],
+    navContainer: ".main-content .custom-nav1",
+    responsive: {
+      0: {
+        items: 1,
+      },
+      370: {
+        items: 1,
+      },
 
-    870: {
-      items: 2,
-    },
+      870: {
+        items: 2,
+      },
 
-    1270: {
-      items: 3,
+      1270: {
+        items: 3,
+      },
+      1570: {
+        items: 4,
+      },
+      1870: {
+        items: 5,
+      },
     },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
-// }
+  });
+}
 
-// if (typeof owlCarousel === "function") {
-$(".main-content .owl-three").owlCarousel({
-  stagePadding: 50,
-  loop: false,
-  margin: 10,
-  nav: true,
-  // navText: [
-  //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-  //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-  // ],
-  navContainer: ".main-content .custom-nav2",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+if (typeof owlCarousel === "function") {
+  $(".main-content .owl-three").owlCarousel({
+    stagePadding: 50,
+    loop: false,
+    margin: 10,
+    nav: true,
+    // navText: [
+    //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+    //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+    // ],
+    navContainer: ".main-content .custom-nav2",
+    responsive: {
+      0: {
+        items: 1,
+      },
+      370: {
+        items: 1,
+      },
 
-    870: {
-      items: 2,
-    },
+      870: {
+        items: 2,
+      },
 
-    1270: {
-      items: 3,
+      1270: {
+        items: 3,
+      },
+      1570: {
+        items: 4,
+      },
+      1870: {
+        items: 5,
+      },
     },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
-// }
+  });
+}
