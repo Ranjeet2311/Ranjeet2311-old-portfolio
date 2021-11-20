@@ -399,9 +399,17 @@ gsap.from(".navigation", { duration: 3.5, x: 1000 });
 gsap.from(".up-icon", { duration: 2, y: -1000 });
 
 $(".main-content .owl-one").owlCarousel({
-  stagePadding: 50,
-  loop: true,
-  margin: 10,
+  // stagePadding: 10,
+  autoplay: true,
+  autoplayTimeout: 7000,
+  // loop: true,
+  animateOut: "fadeOut",
+  animateIn: "fadeIn",
+  rewind: true,
+  responsiveClass: true,
+  smartSpeed: 700,
+
+  // margin: 50,
   nav: true,
 
   navContainer: ".main-content .custom-nav",
@@ -430,9 +438,16 @@ $(".main-content .owl-one").owlCarousel({
 });
 
 $(".main-content .owl-two").owlCarousel({
-  stagePadding: 50,
-  loop: true,
-  margin: 10,
+  // stagePadding: 10,
+  autoplay: true,
+  autoplayTimeout: 7000,
+  // loop: true,
+  animateOut: "fadeOut",
+  animateIn: "fadeIn",
+  rewind: true,
+  responsiveClass: true,
+  smartSpeed: 700,
+  // margin: 50,
   nav: true,
   // navText: [
   //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
@@ -463,9 +478,16 @@ $(".main-content .owl-two").owlCarousel({
   },
 });
 $(".main-content .owl-three").owlCarousel({
-  stagePadding: 50,
-  loop: true,
-  margin: 10,
+  // stagePadding: 10,
+  autoplay: true,
+  autoplayTimeout: 7000,
+  // loop: true,
+  animateOut: "fadeOut",
+  animateIn: "fadeIn",
+  rewind: true,
+  responsiveClass: true,
+  smartSpeed: 700,
+  // margin: 50,
   nav: true,
   // navText: [
   //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
