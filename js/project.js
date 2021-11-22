@@ -408,7 +408,6 @@ $(".main-content .owl-one").owlCarousel({
   rewind: true,
   responsiveClass: true,
   smartSpeed: 700,
-
   // margin: 50,
   nav: true,
 

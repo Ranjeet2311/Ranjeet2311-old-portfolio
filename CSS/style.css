@@ -243,6 +243,7 @@
 
 .Avtar_Hide {
   display: none;
+  transition: all 1s ease-ins;
 }
 
 /* --------------- */
@@ -355,6 +356,7 @@
 
 /* ---------------------------------------------- */
 /* _______________About Me starts _________ */
+
 .about-title {
   margin-top: 1rem;
   text-align: center;
@@ -592,12 +594,9 @@
 
 /* -------Projects container */
 
-/* .web-app-project-wraper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} */
+.web-app-project-wraper {
+  margin: 8rem 0rem;
+}
 
 .web-app-project-wraper hr {
   margin: 1rem auto;

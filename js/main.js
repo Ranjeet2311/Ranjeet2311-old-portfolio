@@ -3,11 +3,12 @@ const burger = document.querySelector(".burger");
 const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
 const faDotCircle = document.querySelector(".fa-dot-circle");
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
+const background = document.querySelector(".background");
 
 setInterval(() => {
   faDotCircle.classList.toggle("blink");
-}, 600);
+}, 500);
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("V-opacity");
@@ -15,9 +16,9 @@ burger.addEventListener("click", () => {
 });
 
 // -------Delay time ---
-let delayInMilliseconds = 1000;
+let delayInMilliseconds = 3000;
 
-body.addEventListener("mouseover", () => {
+background.addEventListener("mouseover", () => {
   setTimeout(function () {
     if (avatarHi) {
       avatarHi.classList.remove("Avtar_Hide");
@@ -28,7 +29,7 @@ body.addEventListener("mouseover", () => {
   }, delayInMilliseconds);
 });
 
-body.addEventListener("mouseout", () => {
+background.addEventListener("mouseout", () => {
   setTimeout(function () {
     if (avatarHi) {
       avatarHi.classList.add("Avtar_Hide");
@@ -41,7 +42,7 @@ body.addEventListener("mouseout", () => {
 
 // -----Greeting - Typewriting effect ----
 
-setInterval(() => {}, 3000);
+// setInterval(() => {}, 3000);
 
 window.addEventListener("DOMContentLoaded", () => {
   let i = 0;
@@ -61,7 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   setInterval(() => {
     typeWriter();
-  }, 600);
+  }, 500);
 });
 
 gsap.config({
