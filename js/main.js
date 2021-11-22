@@ -3,8 +3,8 @@ const burger = document.querySelector(".burger");
 const avatarHi = document.querySelector(".Avatar-Hi");
 const avatarNamaste = document.querySelector(".Avatar-Namaste");
 const faDotCircle = document.querySelector(".fa-dot-circle");
-// const body = document.querySelector("body");
-const background = document.querySelector(".background");
+const body = document.querySelector("body");
+// const background = document.querySelector("#background");
 
 setInterval(() => {
   faDotCircle.classList.toggle("blink");
@@ -18,7 +18,7 @@ burger.addEventListener("click", () => {
 // -------Delay time ---
 let delayInMilliseconds = 3000;
 
-background.addEventListener("mouseover", () => {
+body.addEventListener("mouseover", () => {
   setTimeout(function () {
     if (avatarHi) {
       avatarHi.classList.remove("Avtar_Hide");
@@ -29,7 +29,7 @@ background.addEventListener("mouseover", () => {
   }, delayInMilliseconds);
 });
 
-background.addEventListener("mouseout", () => {
+body.addEventListener("mouseout", () => {
   setTimeout(function () {
     if (avatarHi) {
       avatarHi.classList.add("Avtar_Hide");
