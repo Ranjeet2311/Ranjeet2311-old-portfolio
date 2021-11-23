@@ -131,7 +131,7 @@ const webTemplatesProjectList = [
 ];
 
 const nav = document.querySelector(".nav-menu");
-// const Git = document.querySelector(".Git");
+const Git = document.querySelector(".Git");
 const burger = document.querySelector(".burger");
 const avatarContainer = document.querySelector(".Avatar-Home");
 const avatarHi = document.querySelector(".Avatar-Hi");

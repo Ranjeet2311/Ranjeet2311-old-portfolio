@@ -1,4 +1,14 @@
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1050px) {
+  .container .main .Sk-img {
+    padding: 5px 0px;
+  }
+
+  .container .main .Sk-img .container1 img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 910px) {
   .nav {
     flex-direction: column;
   }
@@ -38,7 +48,7 @@
 
   .V-opacity {
     /* opacity: 0; */
-    transform: translate(-700px, 0px);
+    transform: translate(-1000px, 0px);
     transition: all 0.1s ease-in-out;
   }
 
@@ -96,6 +106,10 @@
     flex-direction: column;
   }
 
+  .container .main {
+    margin: 0px 0px;
+  }
+
   /* ----------Project -------------- */
   .web-app-project-links,
   .web-template-project-links,
@@ -108,9 +122,10 @@
 }
 
 /* ---------- */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 620px) {
   .background {
-    height: 120vh;
+    height: 160vh;
+    padding-top: 2rem;
   }
 }
 /* --Home--- */

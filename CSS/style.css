@@ -356,18 +356,21 @@
 
 /* ---------------------------------------------- */
 /* _______________About Me starts _________ */
-.container {
+/* .container {
   background-image: url(../Img/background-img.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   text-shadow: 2px 2px 2px black;
-}
+} */
 
 .about-title {
   margin-top: 1rem;
   text-align: center;
+  /* text-shadow: -1px -1px 4px black; */
+  /* color: white; */
+  /* filter: invert(1); */
 }
 
 .contain {
@@ -436,13 +439,13 @@
 
 .container .main {
   display: block;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .container .main h1 {
   font-size: 2.5rem;
-  color: white;
-  text-shadow: 2px 2px 2px black;
+  /* color: white; */
+  /* text-shadow: -1px -1px 4px black; */
   text-align: center;
   padding-top: 20px;
 }
@@ -450,8 +453,8 @@
 .container .main h2 {
   font-size: 1.1rem;
   margin: 20px 0px;
-  color: white;
-  text-shadow: 2px 2px 2px black;
+  /* color: white; */
+  /* text-shadow: -1px -1px 4px black; */
   text-align: center;
 }
 
@@ -473,8 +476,8 @@
   align-items: center;
   padding: 20px 0px;
 
-  background-color: rgb(255, 255, 255, 3);
-  border-radius: 10px;
+  /* background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 10px; */
 }
 
 .container .main .Sk-img .container1 {
