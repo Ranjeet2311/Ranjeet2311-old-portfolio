@@ -6,7 +6,6 @@ const webAppProjectList = [
     code: "https://github.com/Ranjeet2311/To-Do-App-Vanilla-JS",
     demo: "/app-demo/todo.html",
   },
-
   {
     id: 2,
     img: "/app-banner/Weather.jpg",
@@ -17,6 +16,14 @@ const webAppProjectList = [
 
   {
     id: 3,
+    img: "/app-banner/qr-code-bg.jpg",
+    title: " To-do-app",
+    code: "https://github.com/Ranjeet2311/Qr-Code-Generator",
+    demo: "https://qr-code-25-11.netlify.app/",
+  },
+
+  {
+    id: 4,
     img: "/app-banner/weight-converter.jpg",
     title: " Weight converter",
     code: "https://github.com/Ranjeet2311/Weight-Converter",
@@ -24,7 +31,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 4,
+    id: 5,
     img: "/app-banner/music-player.jpg",
     title: "Music player",
     code: "https://github.com/Ranjeet2311/Music-player",
@@ -32,7 +39,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: "/app-banner/counter.jpg",
     title: "Counter",
     code: "https://github.com/Ranjeet2311/Counter-",
@@ -40,7 +47,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 6,
+    id: 7,
     img: "/app-banner/Digital-Clock.jpg",
     title: " Digital clock",
     code: "https://github.com/Ranjeet2311/Digital-Clock",
@@ -48,7 +55,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 7,
+    id: 8,
     img: "/app-banner/play-music.jpg",
     title: "Tap the music",
     code: "https://github.com/Ranjeet2311/Tap-the-Music",
@@ -56,7 +63,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 8,
+    id: 9,
     img: "/app-banner/Menu-display.jpg",
     title: "Menu display -filter",
     code: "https://github.com/Ranjeet2311/Dynamic-Menu-Display",
@@ -64,7 +71,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 9,
+    id: 10,
     img: "/app-banner/modal.jpg",
     title: "Best pictures from Europe",
     code: "https://github.com/Ranjeet2311/Modal",
@@ -152,108 +159,107 @@ burger.addEventListener("click", () => {
 
 // ---------Web App Project mapping ---
 
-// window.addEventListener("load", () => {
-// let projectDisplay = webAppProjectList.map(function (item) {
-//   return `   <div class="links-container">
-//       <img src= ${item.img} >
-//       <h4>${item.title}</h4>
-//       <div class="links-container-btn">
-//             <button class="btn-links btn"> <a href=${item.code} target=”_blank”> <i class="fas fa-download"></i> source code
-//                   </a></button>
-//             <button class="btn-links btn"> <a
-//                         href=${item.demo}
-//                         target=”_blank”>Live
-//                         Demo</a>
-//             </button>
-//       </div>
+window.addEventListener("load", () => {
+  let projectDisplay = webAppProjectList.map(function (item) {
+    return `   <div class="links-container">
+      <img src= ${item.img} >
+      <h4>${item.title}</h4>
+      <div class="links-container-btn">
+            <button class="btn-links btn"> <a href=${item.code} target=”_blank”> <i class="fas fa-download"></i> source code
+                  </a></button>
+            <button class="btn-links btn"> <a
+                        href=${item.demo}
+                        target=”_blank”>Live
+                        Demo</a>
+            </button>
+      </div>
 
-//     </div>  `;
-// });
-// projectDisplay = projectDisplay.join("");
-// webAppProjectLinks.innerHTML = projectDisplay;
-// console.log(projectDisplay);
+    </div>  `;
+  });
+  projectDisplay = projectDisplay.join("");
+  webAppProjectLinks.innerHTML = projectDisplay;
+  // console.log(projectDisplay);
 
-// // ---------Web Template Project mapping ------
-// let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
-//   return `                  <div class="links-container">
-//       <img src= ${item.img} >
-//       <h4>${item.title}</h4>
-//       <div class="links-container-btn">
-//             <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
-//                   </a></button>
-//             <button class="btn-links btn"> <a
-//                         href=${item.demo}
-//                         target=”_blank”>Live
-//                         Demo</a>
-//             </button>
-//       </div>
+  // // ---------Web Template Project mapping ------
+  let webTemplateProjectDisplay = webTemplatesProjectList.map(function (item) {
+    return `                  <div class="links-container">
+      <img src= ${item.img} >
+      <h4>${item.title}</h4>
+      <div class="links-container-btn">
+            <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
+                  </a></button>
+            <button class="btn-links btn"> <a
+                        href=${item.demo}
+                        target=”_blank”>Live
+                        Demo</a>
+            </button>
+      </div>
 
-//     </div> `;
-// });
-// webTemplateProjectDisplay = webTemplateProjectDisplay.join("");
-// webTemplateProjectLinks.innerHTML = webTemplateProjectDisplay;
+    </div> `;
+  });
+  webTemplateProjectDisplay = webTemplateProjectDisplay.join("");
+  webTemplateProjectLinks.innerHTML = webTemplateProjectDisplay;
 
-// console.log(webTemplateProjectDisplay);
+  // console.log(webTemplateProjectDisplay);
 
-// -----------------React project Display---------------
-const reactProjectList = [
-  {
-    id: 1,
-    img: "/reactScreenshots/movie-database-project.png",
-    title: "Movie Database",
-    code: "https://github.com/Ranjeet2311/React-MovieDatabase-app",
-    demo: "https://movie-database-project-0802.netlify.app/",
-  },
-  {
-    id: 2,
-    img: "/reactScreenshots/quiz-demo.jpg",
-    title: "Quiz App",
-    code: "https://github.com/Ranjeet2311/React-Quiz-App",
-    demo: "https://quiz-app-0810.netlify.app/",
-  },
-  {
-    id: 3,
-    img: "/app-banner/Text-to-speech-image.jpg",
-    title: "Text to Speech",
-    code: "https://github.com/Ranjeet2311/React-Speech-to-text",
-    demo: "https://speech-to-text-09-01.netlify.app",
-  },
-  {
-    id: 4,
-    img: "/reactScreenshots/React-home.png",
-    title: "React-Website",
-    code: "https://github.com/Ranjeet2311/React-Website",
-    demo: "https://react-website-0803.netlify.app/",
-  },
-  {
-    id: 5,
-    img: "/reactScreenshots/react-menu-home.png",
-    title: "React Dynamic Menu",
-    code: "https://github.com/Ranjeet2311/React-Navbar",
-    demo: "https://react-navigation-menu-0803.netlify.app/",
-  },
-];
+  // -----------------React project Display---------------
+  const reactProjectList = [
+    {
+      id: 1,
+      img: "/reactScreenshots/movie-database-project.png",
+      title: "Movie Database",
+      code: "https://github.com/Ranjeet2311/React-MovieDatabase-app",
+      demo: "https://movie-database-project-0802.netlify.app/",
+    },
+    {
+      id: 2,
+      img: "/reactScreenshots/quiz-demo.jpg",
+      title: "Quiz App",
+      code: "https://github.com/Ranjeet2311/React-Quiz-App",
+      demo: "https://quiz-app-0810.netlify.app/",
+    },
+    {
+      id: 3,
+      img: "/app-banner/Text-to-speech-image.jpg",
+      title: "Text to Speech",
+      code: "https://github.com/Ranjeet2311/React-Speech-to-text",
+      demo: "https://speech-to-text-09-01.netlify.app",
+    },
+    {
+      id: 4,
+      img: "/reactScreenshots/React-home.png",
+      title: "React-Website",
+      code: "https://github.com/Ranjeet2311/React-Website",
+      demo: "https://react-website-0803.netlify.app/",
+    },
+    {
+      id: 5,
+      img: "/reactScreenshots/react-menu-home.png",
+      title: "React Dynamic Menu",
+      code: "https://github.com/Ranjeet2311/React-Navbar",
+      demo: "https://react-navigation-menu-0803.netlify.app/",
+    },
+  ];
 
-//   let reactProjectDisplay = reactProjectList.map(function (item) {
-//     return `<div class="links-container">
-//   <img src= ${item.img} >
-//   <h4>${item.title}</h4>
-//   <div class="links-container-btn">
-//         <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
-//               </a></button>
-//         <button class="btn-links btn"> <a
-//                     href=${item.demo}
-//                     target=”_blank”>Live
-//                     Demo</a>
-//         </button>
-//   </div>
+  let reactProjectDisplay = reactProjectList.map(function (item) {
+    return `<div class="links-container">
+  <img src= ${item.img} >
+  <h4>${item.title}</h4>
+  <div class="links-container-btn">
+        <button class="btn-links btn"> <a href=${item.code} target=”_blank” > <i class="fas fa-download"></i> source code
+              </a></button>
+        <button class="btn-links btn"> <a
+                    href=${item.demo}
+                    target=”_blank”>Live
+                    Demo</a>
+        </button>
+  </div>
 
-// </div>`;
-//   });
-//   reactProjectDisplay = reactProjectDisplay.join(" ");
-//   reactAppProjectLinks.innerHTML = reactProjectDisplay;
-
-// });
+</div>`;
+  });
+  reactProjectDisplay = reactProjectDisplay.join(" ");
+  reactAppProjectLinks.innerHTML = reactProjectDisplay;
+});
 
 // let reactAppProjectLinks = reactProjectList.map(function (item) {
 //   return `                  <div class="links-container">
@@ -398,123 +404,123 @@ gsap.from(".scroll-links", { duration: 3, x: -1000 });
 gsap.from(".navigation", { duration: 3.5, x: 1000 });
 gsap.from(".up-icon", { duration: 2, y: -1000 });
 
-$(".main-content .owl-one").owlCarousel({
-  // stagePadding: 10,
-  autoplay: true,
-  autoplayTimeout: 7000,
-  // loop: true,
-  animateOut: "fadeOut",
-  animateIn: "fadeIn",
-  rewind: true,
-  responsiveClass: true,
-  smartSpeed: 700,
-  // margin: 50,
-  nav: true,
+// $(".main-content .owl-one").owlCarousel({
+//   // stagePadding: 10,
+//   autoplay: true,
+//   autoplayTimeout: 7000,
+//   // loop: true,
+//   animateOut: "fadeOut",
+//   animateIn: "fadeIn",
+//   rewind: true,
+//   responsiveClass: true,
+//   smartSpeed: 700,
+//   // margin: 50,
+//   nav: true,
 
-  navContainer: ".main-content .custom-nav",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+//   navContainer: ".main-content .custom-nav",
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     370: {
+//       items: 1,
+//     },
 
-    870: {
-      items: 2,
-    },
+//     870: {
+//       items: 2,
+//     },
 
-    1270: {
-      items: 3,
-    },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
+//     1270: {
+//       items: 3,
+//     },
+//     1570: {
+//       items: 4,
+//     },
+//     1870: {
+//       items: 5,
+//     },
+//   },
+// });
 
-$(".main-content .owl-two").owlCarousel({
-  // stagePadding: 10,
-  autoplay: true,
-  autoplayTimeout: 7000,
-  // loop: true,
-  animateOut: "fadeOut",
-  animateIn: "fadeIn",
-  rewind: true,
-  responsiveClass: true,
-  smartSpeed: 700,
-  // margin: 50,
-  nav: true,
-  // navText: [
-  //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-  //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-  // ],
-  navContainer: ".main-content .custom-nav1",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+// $(".main-content .owl-two").owlCarousel({
+//   // stagePadding: 10,
+//   autoplay: true,
+//   autoplayTimeout: 7000,
+//   // loop: true,
+//   animateOut: "fadeOut",
+//   animateIn: "fadeIn",
+//   rewind: true,
+//   responsiveClass: true,
+//   smartSpeed: 700,
+//   // margin: 50,
+//   nav: true,
+//   // navText: [
+//   //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+//   //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+//   // ],
+//   navContainer: ".main-content .custom-nav1",
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     370: {
+//       items: 1,
+//     },
 
-    870: {
-      items: 2,
-    },
+//     870: {
+//       items: 2,
+//     },
 
-    1270: {
-      items: 3,
-    },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
-$(".main-content .owl-three").owlCarousel({
-  // stagePadding: 10,
-  autoplay: true,
-  autoplayTimeout: 7000,
-  // loop: true,
-  animateOut: "fadeOut",
-  animateIn: "fadeIn",
-  rewind: true,
-  responsiveClass: true,
-  smartSpeed: 700,
-  // margin: 50,
-  nav: true,
-  // navText: [
-  //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-  //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-  // ],
-  navContainer: ".main-content .custom-nav2",
-  responsive: {
-    0: {
-      items: 1,
-    },
-    370: {
-      items: 1,
-    },
+//     1270: {
+//       items: 3,
+//     },
+//     1570: {
+//       items: 4,
+//     },
+//     1870: {
+//       items: 5,
+//     },
+//   },
+// });
+// $(".main-content .owl-three").owlCarousel({
+//   // stagePadding: 10,
+//   autoplay: true,
+//   autoplayTimeout: 7000,
+//   // loop: true,
+//   animateOut: "fadeOut",
+//   animateIn: "fadeIn",
+//   rewind: true,
+//   responsiveClass: true,
+//   smartSpeed: 700,
+//   // margin: 50,
+//   nav: true,
+//   // navText: [
+//   //   '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+//   //   '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+//   // ],
+//   navContainer: ".main-content .custom-nav2",
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     370: {
+//       items: 1,
+//     },
 
-    870: {
-      items: 2,
-    },
+//     870: {
+//       items: 2,
+//     },
 
-    1270: {
-      items: 3,
-    },
-    1570: {
-      items: 4,
-    },
-    1870: {
-      items: 5,
-    },
-  },
-});
+//     1270: {
+//       items: 3,
+//     },
+//     1570: {
+//       items: 4,
+//     },
+//     1870: {
+//       items: 5,
+//     },
+//   },
+// });
 
 // .custom-nav .owl-next
