@@ -17,7 +17,7 @@ const webAppProjectList = [
   {
     id: 3,
     img: "/app-banner/qr-code-bg.jpg",
-    title: " To-do-app",
+    title: " QR-Code Generator",
     code: "https://github.com/Ranjeet2311/Qr-Code-Generator",
     demo: "https://qr-code-25-11.netlify.app/",
   },
