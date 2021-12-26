@@ -21,9 +21,16 @@ const webAppProjectList = [
     code: "https://github.com/Ranjeet2311/Qr-Code-Generator",
     demo: "https://qr-code-25-11.netlify.app/",
   },
-
   {
     id: 4,
+    img: "/app-banner/Personality-match.jpg",
+    title: "Personality Match",
+    code: "https://github.com/Ranjeet2311/Personality-Match",
+    demo: "https://personality-match.netlify.app/",
+  },
+
+  {
+    id: 5,
     img: "/app-banner/weight-converter.jpg",
     title: " Weight converter",
     code: "https://github.com/Ranjeet2311/Weight-Converter",
@@ -31,7 +38,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: "/app-banner/music-player.jpg",
     title: "Music player",
     code: "https://github.com/Ranjeet2311/Music-player",
@@ -39,7 +46,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 6,
+    id: 7,
     img: "/app-banner/counter.jpg",
     title: "Counter",
     code: "https://github.com/Ranjeet2311/Counter-",
@@ -47,7 +54,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 7,
+    id: 8,
     img: "/app-banner/Digital-Clock.jpg",
     title: " Digital clock",
     code: "https://github.com/Ranjeet2311/Digital-Clock",
@@ -55,7 +62,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 8,
+    id: 9,
     img: "/app-banner/play-music.jpg",
     title: "Tap the music",
     code: "https://github.com/Ranjeet2311/Tap-the-Music",
@@ -63,7 +70,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 9,
+    id: 10,
     img: "/app-banner/Menu-display.jpg",
     title: "Menu display -filter",
     code: "https://github.com/Ranjeet2311/Dynamic-Menu-Display",
@@ -71,7 +78,7 @@ const webAppProjectList = [
   },
 
   {
-    id: 10,
+    id: 11,
     img: "/app-banner/modal.jpg",
     title: "Best pictures from Europe",
     code: "https://github.com/Ranjeet2311/Modal",
@@ -229,7 +236,7 @@ window.addEventListener("load", () => {
     {
       id: 4,
       img: "/app-banner/drone-comapny.jpg",
-      title: "Movie Database",
+      title: "Drone Company",
       code: "https://github.com/Ranjeet2311/React--Sass-Website",
       demo: "https://drone-comapny.netlify.app/",
     },
